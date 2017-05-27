@@ -1,0 +1,518 @@
+/*
+* @Author: admin
+* @Date:   2017-04-20 17:16:11
+* @Last Modified by:   admin
+* @Last Modified time: 2017-05-19 11:21:10
+*/
+/*公用*/
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix{zoom:1;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,
+aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box;letter-spacing: 0.8px;}
+
+@font-face { 
+  font-family: myfont;
+  src: url('../fonts/DIN Alternate Bold.ttf');
+}
+i,em,b,{font-weight: normal;font-style: normal;}
+.scroll-wrap {
+	padding-top: 1.333333rem;
+	padding-bottom: 1.066667rem;
+}
+.twoline_ellipsis{
+	overflow: hidden;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    display: -webkit-box;
+    display: box;
+}
+body .mybtn {
+	display: inline-block;
+	border: 1px solid #7E808A;
+	text-align: center;
+	font-size: 0.266667rem;
+	color: #7E808A;
+	letter-spacing: 0.57px;
+	text-decoration: none;
+	padding:0.24rem  0.373333rem;
+	margin: 0.266667rem 0;
+}
+.popup_prohibit_html{
+	height: 100%;
+	overflow: hidden;
+}
+.container {
+	width: 88.8%;
+	margin: 0 auto;
+}
+.txt_color {
+	color: #000000;
+}
+/*头部*/
+header {
+	width: 100%;
+	height: 1.333333rem;
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#2A2A2F), to(#383845));
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+}
+.header-l {
+	width: 50%;
+	height: 100%;
+	float: left;
+	padding-left: 0.426667rem;
+}
+.header-l .btn {
+	width: 0.64rem;
+	height: 0.64rem;
+	margin-top: 0.346667rem;
+	margin-right: 0.426667rem
+}
+.header-l .logo {
+	width: 0.533333rem;
+	height: 0.933333rem;
+	margin-top: 0.186667rem;
+}
+.header-r {
+	width: 50%;
+	height: 100%;
+	padding-top: 0.346667rem;
+	padding-right: 0.346667rem;
+	float: right;
+	text-align: right;
+}
+.header-r a {
+	width: 0.64rem;
+	height: 0.64rem;
+}
+.header-r a.personal {
+	margin:0 0.426667rem;
+}
+header a {
+	display: inline-block;
+	vertical-align: top;
+}
+header a img{
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+}
+/*头部*/
+
+/* 底部 */
+footer{
+	width: 100%;
+	background-color: #2A2A2F;
+}
+.footer-content {
+	width: 88.8%;
+	margin: 0 auto;
+}
+.footer-contact {
+	width: 100%;
+	border-bottom: 1px solid #7E808A;
+	padding: 0.453333rem 0 0.226667rem;
+}
+.footer-contact h5{
+	font-size: 0.373333rem;
+	color: #FFFFFF;
+	background: url(../images/footer-contact.png) no-repeat;
+	background-size: contain;
+	padding-left: 60px;
+}
+.footer-contact p{
+	font-size: 0.533333rem;
+	color: #FFFFFF;
+	padding-left: 60px;
+	padding-top: 0.213333rem;
+}
+.footer-introduce {
+	width: 100%;
+	padding: 0.426667rem 0 0.346667rem;
+	border-bottom: 1px solid #7E808A;
+}
+.footer-introduce h5 {
+	font-size: 0.373333rem;
+	color: #FFFFFF;
+	background: url(../images/footer-introduce.png) no-repeat;
+	background-size: contain;
+	padding-left: 60px;
+}
+.footer-introduce ul {
+	padding: 0.213333rem 0 0.213333rem 60px;
+}
+.footer-introduce ul li {
+	line-height: 1.6;
+	font-size: 0.32rem;
+	color: #7E808A;
+}
+.footer-copyright {
+	padding: 0.213333rem 0;
+}
+.footer-copyright p {
+	font-size: 0.266667rem;
+	color: #7E808A;
+}
+
+.footer2 {
+	width: 100%;
+	background: #2A2A2F;
+}
+.footer2-pb {
+	padding-bottom: 1.333333rem;
+}
+.footer2-content {
+	width: 88.8%;
+	margin: 0 auto;
+}
+.footer2-contact {
+	border-bottom: 1px solid #7E808A;
+	height: 1.306667rem;
+	line-height: 1.306667rem;
+}
+.footer2-contact h5{
+	font-size: 0.373333rem;
+	color: #FFFFFF;
+	background: url(../images/footer-contact.png) no-repeat;
+	background-size: contain;
+	padding: 0.053333rem 0 0.053333rem 0.8rem;
+	line-height: 1;
+	margin-top: 0.4rem;
+}
+.footer2-contact p{
+	font-size: 0.533333rem;
+	color: #FFFFFF;
+	padding-left: 0.213333rem;
+}
+.footer2-copyright {
+	padding: 0.213333rem 0;
+}
+.footer2-copyright p {
+	font-size: 0.266667rem;
+	color: #7E808A;
+}
+
+/* 底部 */
+
+/*回到顶部*/
+.sidebar {
+	position: fixed;
+	right: 0.426667rem;
+	bottom: 1.566667rem;
+	width: 1.173333rem;
+	height: 2.666666rem;
+}
+.sidebar .help {
+	display: block;
+	width: 1.173333rem;
+	height: 1.173333rem;
+	background: url(../images/help.png) no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	margin-bottom: 0.32rem;
+}
+.sidebar .gotop {
+	width: 1.173333rem;
+	height: 1.173333rem;
+	background: url(../images/gotop.png) no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	display: none;
+}
+/*回到顶部*/
+
+
+
+/*加入购物车*/
+.bottom_bar {
+	width: 100%;
+	height: 1.333333rem;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+.bottom_bar .sys_button{
+	width: 50%;
+	height: 1.333333rem;
+	line-height: 1.333333rem;
+	float: left;
+	text-align: center;
+	font-size: 0.373333rem;
+}
+.bottom_bar .cart {
+	background: #FDFDFF;
+	color: #2A2A2F;
+}
+.bottom_bar .buy {
+	background: #FF1431;
+	color: #fff;
+}
+
+/*加入购物车*/
+
+
+/*联系我们*/
+.contactUs {
+	width: 100%;
+	height: 1.333333rem;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background-color: #fff;
+}
+.contactUs .contactUs-mode{
+	height: 1.333333rem;
+	font-size: 0.266667rem;
+	color: #7E808A;
+	padding-left: 0.426667rem;
+	padding-top: 0.213333rem;
+	padding-bottom: 0.213333rem;
+}
+.contactUs .contactUs-mode p {
+	padding-left: 0.453333rem;
+}
+.contactUs .contactUs-mode p.tel{
+	background: url(../images/contactUs-tel.png) no-repeat;
+	-webkit-background-size:contain ;
+	background-size: contain;
+	margin-bottom: 0.133333rem;
+}
+.contactUs .contactUs-mode p.email{
+	background: url(../images/contactUs-tel.png) no-repeat;
+	-webkit-background-size:contain ;
+	background-size: contain;
+}
+.contactUs-link {
+	width: 3.413333rem;
+	height: 1.333333rem;
+}
+.contactUs-link a {
+	display: block;
+	width: 3.413333rem;
+	height: 1.333333rem;
+	background-color: #FF1431;
+	text-align: center;
+	line-height: 1.333333rem;
+	font-size: 0.373333rem;
+	color: #FDFDFF;
+}
+/*联系我们*/
+
+/*马上预约*/
+.appointed {
+	width: 100%;
+	height: 1.333333rem;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background-color: #fff;
+}
+.appointed-text {
+	padding-top: 0.213333rem;
+}
+.appointed-text p{
+	width: 4.973333rem;
+	font-size: 0.32rem;
+	color: #7E808A;
+	line-height: 1.6;
+}
+.appointed-link {
+	padding-top:0.293333rem;
+}
+.appointed-link a {
+	display: block;
+	width: 1.866667rem;
+	height: 0.693333rem;
+	background: #2A2A2F;
+	text-align: center;
+	line-height: 0.693333rem;
+	font-size: 0.266667rem;
+	color: #FDFDFF;
+}
+.appointed-text .icon {
+	height: 1.333333rem;
+	position: relative;
+	width: 0.426667rem;
+}
+.appointed-text .icon i{
+	display: inline-block;
+	width: 0.426667rem;
+	height: 0.426667rem;
+	border: 1px solid #7E808A;
+	border-radius: 50%;
+	vertical-align: middle;
+	position: absolute;
+	top:50%;
+	margin-top:-0.213333rem;
+}
+.appointed-text .icon.active i {
+	background-color: #f57d00;
+	border: 1px solid #f57d00;
+}
+.appointed-text .t-notice-p {
+	padding: 0.213333rem 0 0.213333rem 0.213333rem;
+}
+/*马上预约*/
+
+
+
+/*侧边导航栏*/
+
+html.sidenav-active{
+	height: 100%;
+	overflow: hidden;
+}
+.sidenav-opa {
+	width: 100%;
+	height:100%;
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index: 209; 
+	background-color: rgba(0,0,0,.5);
+	display: none;
+}
+.sidenav {
+	width: 85%;
+	height: 100%;
+	background-color: #fff;
+	position: absolute;
+	z-index: 210;
+	transition: 1s cubic-bezier(0.32,-0.12, 0.24, 0.97) transform;
+	transform: translate(-100%, 0px);
+	overflow-y :auto
+}
+.sidenav.active {
+	transform: translate(0px, 0px);
+	transition: 1s cubic-bezier(0.32,-0.12, 0.24, 0.97) transform;
+}
+.pageContent{
+	transform: translate(0px, 0px);
+	transition: transform 1s cubic-bezier(0.32,-0.12, 0.24, 0.97);
+}
+.pageContent.active {
+	transform: translate(85%, 0px);
+	transition: transform 1s cubic-bezier(0.32,-0.12, 0.24, 0.97);
+}
+.sidenav ul {
+	padding-top:0.213333rem;
+}
+.sidenav ul li {
+	width: 100%;
+	padding:0.426667rem  0.426667rem 0.426667rem 0.426667rem;
+	border-bottom: 1px solid #D5DAE1;
+}
+.sidenav ul li .sidenav-a {
+	width: 100%;
+	display: block;
+	text-decoration: none;
+	color:#2A2A2F;
+}
+.sidenav-a div{
+	width: 100%;
+}
+.sidenav-a div p {
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	padding: 0.08rem 0 0.08rem 0.693333rem;
+	line-height: 1;
+	float: left;
+}
+.sidenav-a div p.p1 {
+	background: url(../images/sidenav1.png) no-repeat;
+	background-size: contain;
+}
+.sidenav-a div p.p2 {
+	background: url(../images/sidenav2.png) no-repeat;
+	background-size: contain;
+}
+.sidenav-a div p.p3 {
+	background: url(../images/sidenav3.png) no-repeat;
+	background-size: contain;
+}
+.sidenav-a div p.p4 {
+	background: url(../images/sidenav4.png) no-repeat;
+	background-size: contain;
+}
+.sidenav ul li.quickSelection a p.p5 {
+	background: url(../images/sidenav5.png) no-repeat;
+	background-size: contain;
+}
+.sidenav ul li.quickSelection a p.p6 {
+	background: url(../images/sidenav6.png) no-repeat;
+	background-size: contain;
+}
+.sidenav-a div p.p7 {
+	background: url(../images/sidenav7.png) no-repeat;
+	background-size: contain;
+}
+.sidenav-a div p.p8 {
+	background: url(../images/sidenav8.png) no-repeat;
+	background-size: contain;
+}
+.sidenav-a div p.p9 {
+	background: url(../images/sidenav9.png) no-repeat;
+	background-size: contain;
+}
+.sidenav-a div p.p10 {
+	background: url(../images/sidenav10.png) no-repeat;
+	background-size: contain;
+}
+.sidenav-a div p.p11 {
+	background: url(../images/sidenav11.png) no-repeat;
+	background-size: contain;
+}
+.sidenav-a div i {
+	font-style: normal;
+	float: right;
+	font-size:0.373333rem;
+	transform: scaleY(1.5);
+} 
+.sidenav ul li.quickSelection {
+
+}
+.sidenav ul li.quickSelection a{
+	display: inline-block;
+	width: 44%;
+	padding: 0.373333rem 0;
+	border: 2px solid #2A2A2F;
+	color: #2A2A2F;
+	text-decoration: none;
+	text-align: center;
+}	
+.sidenav ul li.quickSelection a:nth-child(1){
+	margin-right:0.426667rem;
+}
+.sidenav ul li.quickSelection a p {
+	display: inline-block;
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	padding: 0.08rem 0 0.08rem 0.693333rem;
+	line-height: 1;
+	vertical-align: top;
+}
+.sidenav ul li.borNo {
+	border-bottom: none;
+}
+
+
+
+/*侧边导航栏*/
+
+
+
+
+
+
+
+

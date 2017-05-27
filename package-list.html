@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>套餐列表页</title>
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="telephone=no,email=no" name="format-detection">
+        <link rel="stylesheet" href="css/swiper.css">
+        <link rel="stylesheet" href="css/public.css">
+        <link rel="stylesheet" href="css/module.css">
+
+        <script src="build/flexible_css.debug.js"></script>
+        <script src="build/flexible.debug.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/public.js"></script>
+        <script src="js/module.js"></script>
+    </head>
+    <body>
+        <!-- 侧边导航栏 -->
+        <div class="sidenav-opa"></div>
+        <div class="sidenav">
+            <ul>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p1">套餐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p2">酒店</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p3">美食</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p4">票务</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="quickSelection borNo">
+                    <a href="javascript:;">
+                        <p class="p5">私人订制</p>
+                    </a>
+                    <a href="javascript:;">
+                        <p class="p6">私人订制</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p7">会展婚宴</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p8">购物娱乐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p9">景区导览</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p10">语音导游</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p11">积分卡券</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="pageContent">
+            <!-- 页头 -->
+        	<header class="clearfix">
+                <div class="header-l">
+                    <a id="header-btn" class="btn" href="javascript:;"><img src="images/header-btn.png"></a>
+                    <a class="logo" href="index.html"><img src="images/logo.png"></a>
+                </div>
+                <div class="header-r">
+                    <a href="javascript:;"><img src="images/tel.png"></a>
+                    <a class="personal" href="javascript:;"><img src="images/geren.png"></a>
+                    <a href="javascript:;"><img src="images/shopping-cart.png"></a>
+                </div>      
+            </header>
+            <!-- 内容 -->
+            <div class="newList">
+                <div class="newList-content">
+                    <div class="newList-title">
+                        <h4>套餐</h4><br>
+                        <p>51件产品</p>
+                    </div>
+                    <div class="newList-co-option">
+                        <div class="date clearfix">
+                            <div class="date-arrive left borderR">
+                                <p>到达</p>
+                                <input type="text" value="2016-12-26" readonly="readonly">
+                            </div>
+                            <div class="date-leave left">
+                                <p></p>
+                                <input type="text" value="" readonly="readonly">
+                            </div>
+                        </div>
+                        <ul class="format clearfix">
+                            <li>
+                                <span class="text">套餐类别</span>
+                                <span class="arrow"></span>
+                            </li>
+                            <li>
+                                <span class="text">综合排序</span>
+                                <span class="arrow"></span>
+                            </li>
+                            <li class="active">
+                                <span class="text">更多筛选</span>
+                                <span class="arrow"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="newList-data">
+                    <div class="newList-info">
+                        <div class="container">
+                            <div class="newList-info-oneof">
+                                <div class="nio-top clearfix">
+                                    <div class="nio-top-l left">
+                                        <img src="images/nio-top1.png">
+                                        <span>4.5</span>
+                                    </div>
+                                    <div class="nio-top-r left">
+                                        <h4>乐享美食</h4>
+                                        <h5><span>687</span>元<i>起</i></h5>
+                                        <p>115条评价</p>
+                                        <p>已售<span>1340</span></p>
+                                    </div>
+                                    <div class="collection">
+                                        <img src="images/collection1.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nio-bottom">
+                            <div class="container">
+                                <ul class="ul-height">
+                                    <li class="clearfix">
+                                        <div class="li-text left">
+                                            <h3>乐享美食A</h3>
+                                            <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
+                                        </div>
+                                        <div class="li-price left">
+                                            <p><span>1280</span>元</p>
+                                        </div>
+                                        <div class="li-purchase right">
+                                            <a class="btn-shoppingCart" href="javascript:;">加入购物车</a>
+                                            <a class="btn-purchase" href="javascript:;">立即购买</a>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-text left">
+                                            <h3>乐享美食A</h3>
+                                            <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
+                                        </div>
+                                        <div class="li-price left">
+                                            <p><span>1280</span>元</p>
+                                        </div>
+                                        <div class="li-purchase right">
+                                            <a class="btn-shoppingCart" href="javascript:;">加入购物车</a>
+                                            <a class="btn-purchase" href="javascript:;">立即购买</a>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-text left">
+                                            <h3>乐享美食A</h3>
+                                            <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
+                                        </div>
+                                        <div class="li-price left">
+                                            <p><span>1280</span>元</p>
+                                        </div>
+                                        <div class="li-purchase right">
+                                            <a class="btn-shoppingCart" href="javascript:;">加入购物车</a>
+                                            <a class="btn-purchase" href="javascript:;">立即购买</a>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-text left">
+                                            <h3>乐享美食A</h3>
+                                            <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
+                                        </div>
+                                        <div class="li-price left">
+                                            <p><span>1280</span>元</p>
+                                        </div>
+                                        <div class="li-purchase right">
+                                            <a class="btn-shoppingCart" href="javascript:;">加入购物车</a>
+                                            <a class="btn-purchase" href="javascript:;">立即购买</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="nio-bottom-btn"><a class="btn-a" href="javascript:;">展开</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newList-info">
+                        <div class="container">
+                            <div class="newList-info-oneof">
+                                <div class="nio-top clearfix">
+                                    <div class="nio-top-l left"><img src="images/nio-top1.png"></div>
+                                    <div class="nio-top-r left">
+                                        <h4>乐享美食</h4>
+                                        <h5><span>687</span>元<i>起</i></h5>
+                                        <p>115条评价</p>
+                                        <p>已售<span>1340</span></p>
+                                    </div>
+                                    <div class="collection">
+                                        <img src="images/collection1.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nio-bottom">
+                            <div class="container">
+                                <ul class="ul-height">
+                                    <li class="clearfix">
+                                        <div class="li-text left">
+                                            <h3>乐享美食A</h3>
+                                            <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
+                                        </div>
+                                        <div class="li-price left">
+                                            <p><span>1280</span>元</p>
+                                        </div>
+                                        <div class="li-purchase right">
+                                            <a class="btn-shoppingCart" href="javascript:;">加入购物车</a>
+                                            <a class="btn-purchase" href="javascript:;">立即购买</a>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-text left">
+                                            <h3>乐享美食A</h3>
+                                            <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
+                                        </div>
+                                        <div class="li-price left">
+                                            <p><span>1280</span>元</p>
+                                        </div>
+                                        <div class="li-purchase right">
+                                            <a class="btn-shoppingCart" href="javascript:;">加入购物车</a>
+                                            <a class="btn-purchase" href="javascript:;">立即购买</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="nio-bottom-btn"><a class="btn-a" href="javascript:;">展开</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nothing">已无更多产品</div>
+            </div>
+      
+
+            <!-- 页脚 -->
+            <footer class="footer2">
+                <div class="footer2-content">
+                    <div class="footer2-contact clearfix">
+                        <h5 class="left">联系我们</h5>
+                        <p class="left">0573-88731088</p>
+                    </div>
+                    <div class="footer2-copyright">
+                        <p>版权申明 | 乌镇旅游股份有限公司©版本所有©浙ICP备09047744号</p>
+                    </div>
+                </div>
+            </footer>
+            <!-- 回到顶部及咨询 -->
+            <div class="sidebar">
+                <a class="help" href="javascript:;"></a>
+                <div class="gotop" id="gotop"></div>
+            </div>
+        </div>
+    </body>
+</html>

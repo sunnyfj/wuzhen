@@ -16,7 +16,7 @@ $(function(){
 
 	//弹出层
 	$('#btn_moreComment').on('click',function(){
-		$('.more-comment').fadeIn(100);
+		$('.more-comment').fadeIn();
 		$('html').addClass('popup_prohibit_html');
 	})
 	$('.more-comment-close').on('click',function(){

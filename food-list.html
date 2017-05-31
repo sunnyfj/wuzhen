@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>酒店列表页</title>
+        <title>美食列表页</title>
         <meta content="yes" name="apple-mobile-web-app-capable">
         <meta content="yes" name="apple-touch-fullscreen">
         <meta content="telephone=no,email=no" name="format-detection">
@@ -13,7 +13,7 @@
         <script src="build/flexible_css.debug.js"></script>
         <script src="build/flexible.debug.js"></script>
         <script src="js/swiper.min.js"></script>
-        <script src="js/jquery.min.js"></script>
+        <script src="js/zepto.js"></script>
         <script src="js/public.js"></script>
         <script src="js/module.js"></script>
     </head>
@@ -121,31 +121,31 @@
             <div class="newList">
                 <div class="newList-content">
                     <div class="newList-title">
-                        <h4>酒店</h4><br>
+                        <h4 class="food">美食</h4><br>
                         <p>51件产品</p>
                     </div>
                     <div class="newList-co-option">
                         <div class="date clearfix">
                             <div class="date-arrive left borderR">
-                                <p>入住</p>
+                                <p>用餐时间</p>
                                 <input type="text" value="2016-12-26" readonly="readonly">
                             </div>
                             <div class="date-leave left">
-                                <p>离店</p>
-                                <input type="text" value="2016-12-28" readonly="readonly">
+                                <p>-</p>
+                                <input type="text" value="——" readonly="readonly">
                             </div>
                         </div>
                         <ul class="format clearfix">
-                            <li>
-                                <span class="text">酒店类别</span>
+                            <li id="combination-form">
+                                <span class="text">组合形式</span>
                                 <span class="arrow"></span>
                             </li>
-                            <li>
+                            <li id="fit-number">
+                                <span class="text">适合人数</span>
+                                <span class="arrow"></span>
+                            </li>
+                            <li class="active" id="comprehensive">
                                 <span class="text">综合排序</span>
-                                <span class="arrow"></span>
-                            </li>
-                            <li class="active">
-                                <span class="text">更多筛选</span>
                                 <span class="arrow"></span>
                             </li>
                         </ul>
@@ -161,8 +161,8 @@
                                         <span>4.5</span>
                                     </div>
                                     <div class="nio-top-r left">
-                                        <h4>乌镇盛庭行馆</h4>
-                                        <h5><span>1688</span>元<i>起</i></h5>
+                                        <h4><a href="food-details.html">将军府火锅(2人餐）</a></h4>
+                                        <h5><span>220</span>元<i>起</i></h5>
                                         <p>115条评价</p>
                                         <p>已售<span>1340</span></p>
                                     </div>
@@ -177,7 +177,7 @@
                                 <ul class="ul-height">
                                     <li class="clearfix">
                                         <div class="li-text left">
-                                            <h3>锦堂大床房</h3>
+                                            <h3>午餐</h3>
                                             <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
                                         </div>
                                         <div class="li-price left">
@@ -188,39 +188,13 @@
                                             <a class="btn-purchase" href="javascript:;">立即购买</a>
                                         </div>
                                     </li>
-                                    <li class="clearfix">
+                                    <li class="clearfix lastli">
                                         <div class="li-text left">
-                                            <h3>锦堂双标房</h3>
+                                            <h3>晚餐</h3>
                                             <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
                                         </div>
                                         <div class="li-price left">
-                                            <p><span>1280</span>元</p>
-                                        </div>
-                                        <div class="li-purchase right">
-                                            <a class="btn-shoppingCart" href="javascript:;">加入购物车</a>
-                                            <a class="btn-purchase" href="javascript:;">立即购买</a>
-                                        </div>
-                                    </li>
-                                    <li class="clearfix">
-                                        <div class="li-text left">
-                                            <h3>锦堂双标房</h3>
-                                            <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
-                                        </div>
-                                        <div class="li-price left">
-                                            <p><span>1280</span>元</p>
-                                        </div>
-                                        <div class="li-purchase right">
-                                            <a class="btn-shoppingCart" href="javascript:;">加入购物车</a>
-                                            <a class="btn-purchase" href="javascript:;">立即购买</a>
-                                        </div>
-                                    </li>
-                                    <li class="clearfix">
-                                        <div class="li-text left">
-                                            <h3>锦堂双标房</h3>
-                                            <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
-                                        </div>
-                                        <div class="li-price left">
-                                            <p><span>1280</span>元</p>
+                                            <p><span>220</span>元</p>
                                         </div>
                                         <div class="li-purchase right">
                                             <a class="btn-shoppingCart" href="javascript:;">加入购物车</a>
@@ -228,7 +202,6 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <div class="nio-bottom-btn"><a class="btn-a" href="javascript:;">展开</a></div>
                             </div>
                         </div>
                     </div>
@@ -238,7 +211,7 @@
                                 <div class="nio-top clearfix">
                                     <div class="nio-top-l left"><img src="images/nio-top1.png"></div>
                                     <div class="nio-top-r left">
-                                        <h4>乌镇恒益堂行馆</h4>
+                                        <h4>将军府火锅(6人)</h4>
                                         <h5><span>1688</span>元<i>起</i></h5>
                                         <p>115条评价</p>
                                         <p>已售<span>1340</span></p>
@@ -254,7 +227,7 @@
                                 <ul class="ul-height">
                                     <li class="clearfix">
                                         <div class="li-text left">
-                                            <h3>锦堂大床房</h3>
+                                            <h3>午餐</h3>
                                             <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
                                         </div>
                                         <div class="li-price left">
@@ -265,13 +238,13 @@
                                             <a class="btn-purchase" href="javascript:;">立即购买</a>
                                         </div>
                                     </li>
-                                    <li class="clearfix">
+                                    <li class="clearfix lastli">
                                         <div class="li-text left">
-                                            <h3>锦堂双标房</h3>
+                                            <h3>晚餐</h3>
                                             <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
                                         </div>
                                         <div class="li-price left">
-                                            <p><span>1280</span>元</p>
+                                            <p><span>220</span>元</p>
                                         </div>
                                         <div class="li-purchase right">
                                             <a class="btn-shoppingCart" href="javascript:;">加入购物车</a>
@@ -279,7 +252,56 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <div class="nio-bottom-btn"><a class="btn-a" href="javascript:;">展开</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newList-info">
+                        <div class="container">
+                            <div class="newList-info-oneof">
+                                <div class="nio-top clearfix">
+                                    <div class="nio-top-l left"><img src="images/nio-top1.png"></div>
+                                    <div class="nio-top-r left">
+                                        <h4>四季下午茶</h4>
+                                        <h5><span>120</span>元<i>起</i></h5>
+                                        <p>115条评价</p>
+                                        <p>已售<span>1340</span></p>
+                                    </div>
+                                    <div class="collection">
+                                        <img src="images/collection1.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nio-bottom">
+                            <div class="container">
+                                <ul class="ul-height">
+                                    <li class="clearfix">
+                                        <div class="li-text left">
+                                            <h3>午餐</h3>
+                                            <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
+                                        </div>
+                                        <div class="li-price left">
+                                            <p><span>1280</span>元</p>
+                                        </div>
+                                        <div class="li-purchase right">
+                                            <a class="btn-shoppingCart" href="javascript:;">加入购物车</a>
+                                            <a class="btn-purchase" href="javascript:;">立即购买</a>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix lastli">
+                                        <div class="li-text left">
+                                            <h3>晚餐</h3>
+                                            <p class="twoline_ellipsis">产品说明：房间至多住两人房间至多住两人...</p>
+                                        </div>
+                                        <div class="li-price left">
+                                            <p><span>220</span>元</p>
+                                        </div>
+                                        <div class="li-purchase right">
+                                            <a class="btn-shoppingCart" href="javascript:;">加入购物车</a>
+                                            <a class="btn-purchase" href="javascript:;">立即购买</a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -300,11 +322,90 @@
                     </div>
                 </div>
             </footer>
-            <!-- 回到顶部及咨询 -->
-            <div class="sidebar">
-                <a class="help" href="javascript:;"></a>
-                <div class="gotop" id="gotop"></div>
+        </div>
+        <!-- 回到顶部及咨询 -->
+        <div class="sidebar">
+            <a class="help" href="javascript:;"></a>
+            <div class="gotop" id="gotop"></div>
+        </div> 
+
+        <!-- 单页删选 -->
+        <div class="S_PageSelection" id="cf_content">
+            <div class="newList-title">
+                <h5>美食类别</h5><br>
+                <p>美食列表</p>
+            </div>
+            <div class="S_PageSelection_content">
+                <div class="container">
+                    <ul>
+                        <li class="active">
+                            <p>西栅奢华游</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>东栅休闲艺术游</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>乌村休闲游</p>
+                            <i></i>
+                        </li>
+                    </ul>
+                    <a class="S_btn" href="javascript:;">确定</a>
+                </div>
             </div>
         </div>
+        <div class="S_PageSelection" id="fn_content">
+            <div class="newList-title">
+                <h5>美食类别</h5><br>
+                <p>美食列表</p>
+            </div>
+            <div class="S_PageSelection_content">
+                <div class="container">
+                    <ul>
+                        <li class="active">
+                            <p>西栅奢华游</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>东栅休闲艺术游</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>乌村休闲游</p>
+                            <i></i>
+                        </li>
+                    </ul>
+                    <a class="S_btn" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="S_PageSelection" id="c_content">
+            <div class="newList-title">
+                <h5>美食类别</h5><br>
+                <p>美食列表</p>
+            </div>
+            <div class="S_PageSelection_content">
+                <div class="container">
+                    <ul>
+                        <li class="active">
+                            <p>西栅奢华游</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>东栅休闲艺术游</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>乌村休闲游</p>
+                            <i></i>
+                        </li>
+                    </ul>
+                    <a class="S_btn" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>

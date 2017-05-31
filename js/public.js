@@ -13,10 +13,10 @@ $(function(){
 
 		$(window).scroll(function () {
 			if ($(window).scrollTop() > 268) {
-				$("#" + hvtid).fadeIn(100);
+				$("#" + hvtid).show();
 			}
 			else {
-				$("#" + hvtid).fadeOut(100);
+				$("#" + hvtid).hide();
 			}
 		});
 	}
@@ -54,17 +54,52 @@ $(function(){
 
 	//侧边导航栏
 	$('#header-btn').click(function(event) {
-		$('html').addClass('sidenav-active');
+		$('body').addClass('sidenav-active');
 		$('.sidenav').addClass('active');
 		$('.pageContent').addClass('active');
-		$('.sidenav-opa').fadeIn();
+		$('.sidenav-opa').fadeIn(1000);
 	});
 	$('.sidenav-opa').click(function(event) {
-		$('html').removeClass('sidenav-active');
+		$('body').removeClass('sidenav-active');
 		$('.sidenav').removeClass('active');
 		$('.pageContent').removeClass('active');
-		$('.sidenav-opa').fadeOut();
+		$('.sidenav-opa').removeClass('active');
+
+		$('.sidenav-opa').fadeOut(1000);
 	});
 
-	
+	//单页删选
+	$('.S_PageSelection').find('li').click(function(){
+		$(this).addClass('active').siblings().removeClass('active');
+	})
+
+	//组合形式
+	$('#combination-form').click(function(event) {
+		$('#cf_content').show();
+		$('html').addClass('popup_prohibit_html');
+	});
+	$('#cf_content .S_btn').click(function(event) {
+		$('#cf_content').hide();
+		$('html').removeClass('popup_prohibit_html');
+	});
+
+	//适合人数
+	$('#fit-number').click(function(event) {
+		$('#fn_content').show();
+		$('html').addClass('popup_prohibit_html');
+	});
+	$('#fn_content .S_btn').click(function(event) {
+		$('#fn_content').hide();
+		$('html').removeClass('popup_prohibit_html');
+	});
+
+	//综合排序
+	$('#comprehensive').click(function(event) {
+		$('#c_content').show();
+		$('html').addClass('popup_prohibit_html');
+	});
+	$('#c_content .S_btn').click(function(event) {
+		$('#c_content').hide();
+		$('html').removeClass('popup_prohibit_html');
+	});
 })

@@ -45,6 +45,10 @@ body .mybtn {
 	padding:0.24rem  0.373333rem;
 	margin: 0.266667rem 0;
 }
+html, body {
+    max-width: 100%;
+    height: 100%;
+}
 .popup_prohibit_html{
 	height: 100%;
 	overflow: hidden;
@@ -282,7 +286,7 @@ footer{
 	padding-left: 0.453333rem;
 }
 .contactUs .contactUs-mode p.tel{
-	background: url(../images/contactUs-tel.png) no-repeat;
+	background: url(../images/contactUs-tels.png) no-repeat;
 	-webkit-background-size:contain ;
 	background-size: contain;
 	margin-bottom: 0.133333rem;
@@ -368,8 +372,7 @@ footer{
 
 /*侧边导航栏*/
 
-html.sidenav-active{
-	height: 100%;
+.sidenav-active{
 	overflow: hidden;
 }
 .sidenav-opa {
@@ -379,7 +382,7 @@ html.sidenav-active{
 	top:0;
 	left: 0;
 	z-index: 209; 
-	background-color: rgba(0,0,0,.5);
+	background-color:rgba(0,0,0,.5);
 	display: none;
 }
 .sidenav {
@@ -505,13 +508,88 @@ html.sidenav-active{
 	border-bottom: none;
 }
 
-
-
 /*侧边导航栏*/
 
+/*单页删选*/
+.S_PageSelection {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top:0;
+	left: 0;
+	background-color: #fff;
+	z-index: 230;
+	display: none;
+}
+.newList-title h5{
+    display: inline-block;
+    font-size: 0.533333rem;
+    color: #000;
+    letter-spacing: 0.8px;
+}
+.S_PageSelection_content {
+	width: 100%;
+}
+.S_PageSelection_content ul{
+	width: 100%;
+	border-top:1px solid #7E808A;
+}
+.S_PageSelection_content ul li{
+	width: 100%;
+	border-bottom:1px solid #EAEBF0;
+	position: relative;
+}
+.S_PageSelection_content ul li.active i{
+	border: 2px solid #2A2A2F;
+	border-radius: 50%;
+	background: #2A2A2F;
+}
+.S_PageSelection_content ul li p{
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	padding: 0.426667rem 0;
+}
+.S_PageSelection_content ul li i{
+	position: absolute;
+	right:0;
+	top:0.426667rem;
+	width:0.426667rem;
+	height: 0.426667rem;
+	border: 2px solid #2A2A2F;
+	border-radius: 50%;
+	background: #fff;
+}
+.S_PageSelection .S_btn {
+	position: absolute;
+	bottom:0.64rem;
+	left:50%;
+	margin-left: -2.173333rem;
+	width: 4.346667rem;
+	height: 1.066667rem;
+	background: #2A2A2F;
+	text-decoration: none;
+	text-align: center;
+	line-height:  1.066667rem;
+	font-size: 0.373333rem;
+	color: #FFFFFF;
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*单页删选*/
 
 
 

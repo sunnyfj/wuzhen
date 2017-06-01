@@ -54,6 +54,7 @@ html {
 	overflow: hidden;
 }
 .popup_prohibit_html body{
+	height: 100%;
 	overflow: hidden;
 }
 .container {
@@ -135,12 +136,12 @@ footer{
 	color: #FFFFFF;
 	background: url(../images/footer-contact.png) no-repeat;
 	background-size: contain;
-	padding-left: 60px;
+	padding-left: 0.8rem;
 }
 .footer-contact p{
 	font-size: 0.533333rem;
 	color: #FFFFFF;
-	padding-left: 60px;
+	padding-left: 0.8rem;
 	padding-top: 0.213333rem;
 }
 .footer-introduce {
@@ -153,7 +154,7 @@ footer{
 	color: #FFFFFF;
 	background: url(../images/footer-introduce.png) no-repeat;
 	background-size: contain;
-	padding-left: 60px;
+	padding-left: 0.8rem;
 }
 .footer-introduce ul {
 	padding: 0.213333rem 0 0.213333rem 60px;
@@ -590,7 +591,7 @@ footer{
 	display: inline-block;
 	vertical-align: top;
 	padding: 0.106667rem 0.266667rem;
-	font-size: 28px;
+	font-size: 0.373333rem;
 	color: #2A2A2F;
 	background: #F3F4F8;
 	border-radius: 200px;
@@ -614,7 +615,7 @@ footer{
 	height: 1.066667rem;
 	text-align: center;
 	line-height:1.066667rem;
-	font-size: 28px;
+	font-size: 0.373333rem;
 	text-decoration: none;
 }
 .M_btn a.reset {

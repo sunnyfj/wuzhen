@@ -16,6 +16,11 @@
         <script src="js/zepto.js"></script>
         <script src="js/public.js"></script>
         <script src="js/module.js"></script>
+        <style type="text/css">
+            a:hover{
+                text-decoration: none;
+            }
+        </style>
     </head>
     <body>
         <!-- 侧边导航栏 -->
@@ -329,7 +334,7 @@
             <div class="gotop" id="gotop"></div>
         </div> 
 
-        <!-- 单页删选 -->
+        <!-- 组合形式删选 -->
         <div class="S_PageSelection" id="cf_content">
             <div class="newList-title">
                 <h5>美食类别</h5><br>
@@ -355,6 +360,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- 适合人数删选 -->
         <div class="S_PageSelection" id="fn_content">
             <div class="newList-title">
                 <h5>美食类别</h5><br>
@@ -380,29 +387,58 @@
                 </div>
             </div>
         </div>
-
+        
+        <!-- 综合排序删选 -->
         <div class="S_PageSelection" id="c_content">
             <div class="newList-title">
                 <h5>美食类别</h5><br>
                 <p>美食列表</p>
             </div>
-            <div class="S_PageSelection_content">
-                <div class="container">
-                    <ul>
-                        <li class="active">
-                            <p>西栅奢华游</p>
-                            <i></i>
-                        </li>
-                        <li class="">
-                            <p>东栅休闲艺术游</p>
-                            <i></i>
-                        </li>
-                        <li class="">
-                            <p>乌村休闲游</p>
-                            <i></i>
-                        </li>
-                    </ul>
-                    <a class="S_btn" href="javascript:;">确定</a>
+            <div class="container">
+                <div class="M_PageSelection_content">
+                    <div>
+                        <h3 class="choice-title">房型</h3>
+                        <div class="M_select">
+                            <span class="active">不限</span>
+                            <span>大床房</span>
+                            <span>标准间</span>
+                            <span>家庭房</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="choice-title">房间环境及位置</h3>
+                        <div class="M_select">
+                            <span class="active">临水房间</span>
+                            <span>私家园林</span>
+                            <span>西栅景区内</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="choice-title">价格范围</h3>
+                        <div class="M_select">
+                            <span class="active">不限</span>
+                            <span>500以下</span>
+                            <span>501-1000</span>
+                            <span>1001-2000</span>
+                            <span>2001-5000</span>
+                            <span>5000以上</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="choice-title">特色及服务</h3>
+                        <div class="M_select">
+                            <span class="active">不限</span>
+                            <span>茶室</span>
+                            <span>健身房</span>
+                            <span>SPA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="M_btn">
+                <div class="container clearfix">
+                    <a id="reset" class="reset" href="javascript:;">重置</a>
+                    <a id="determine" class="determine" href="javascript:;">确定</a>
                 </div>
             </div>
         </div>

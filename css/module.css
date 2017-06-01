@@ -618,7 +618,7 @@ body .package-btn a {
 	vertical-align: middle;
 	background:url(../images/open.png) no-repeat;
 	background-size: cover;
-	transition:1s all ease;
+	transition:0.3s all ease;
 }
 .shopping-option div a.open {
 	margin-top:1.146667rem;
@@ -644,6 +644,10 @@ body .package-btn a {
 	width: 3.733333rem;
 	height: 3.733333rem;
 	position: relative;
+}
+.nio-top-l a {
+	display: inline-block;
+	vertical-align: top;
 }
 .nio-top-l span{
 	position: absolute;

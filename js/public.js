@@ -57,7 +57,7 @@ $(function(){
 		$('body').addClass('sidenav-active');
 		$('.sidenav').addClass('active');
 		$('.pageContent').addClass('active');
-		$('.sidenav-opa').fadeIn(1000);
+		$('.sidenav-opa').fadeIn(300);
 	});
 	$('.sidenav-opa').click(function(event) {
 		$('body').removeClass('sidenav-active');
@@ -65,41 +65,90 @@ $(function(){
 		$('.pageContent').removeClass('active');
 		$('.sidenav-opa').removeClass('active');
 
-		$('.sidenav-opa').fadeOut(1000);
+		$('.sidenav-opa').fadeOut(300);
 	});
 
-	//单页删选
-	$('.S_PageSelection').find('li').click(function(){
-		$(this).addClass('active').siblings().removeClass('active');
-	})
+	//list页删选
+		//单页删选
+		$('.S_PageSelection').find('li').click(function(){
+			$(this).addClass('active').siblings().removeClass('active');
+		})
 
-	//组合形式
-	$('#combination-form').click(function(event) {
-		$('#cf_content').show();
-		$('html').addClass('popup_prohibit_html');
-	});
-	$('#cf_content .S_btn').click(function(event) {
-		$('#cf_content').hide();
-		$('html').removeClass('popup_prohibit_html');
-	});
+	//美食↓
+		//组合形式
+		$('#combination-form').click(function(event) {
+			$('#cf_content').show();
+			$('html').addClass('popup_prohibit_html');
+		});
+		$('#cf_content .S_btn').click(function(event) {
+			$('#cf_content').hide();
+			$('html').removeClass('popup_prohibit_html');
+		});
 
-	//适合人数
-	$('#fit-number').click(function(event) {
-		$('#fn_content').show();
-		$('html').addClass('popup_prohibit_html');
-	});
-	$('#fn_content .S_btn').click(function(event) {
-		$('#fn_content').hide();
-		$('html').removeClass('popup_prohibit_html');
-	});
+		//适合人数
+		$('#fit-number').click(function(event) {
+			$('#fn_content').show();
+			$('html').addClass('popup_prohibit_html');
+		});
+		$('#fn_content .S_btn').click(function(event) {
+			$('#fn_content').hide();
+			$('html').removeClass('popup_prohibit_html');
+		});
 
-	//综合排序
-	$('#comprehensive').click(function(event) {
-		$('#c_content').show();
-		$('html').addClass('popup_prohibit_html');
-	});
-	$('#c_content .S_btn').click(function(event) {
-		$('#c_content').hide();
-		$('html').removeClass('popup_prohibit_html');
-	});
+		//综合排序
+		$('#comprehensive').click(function(event) {
+			$('#c_content').show();
+			$('html').addClass('popup_prohibit_html');
+		});
+		$('.M_select span').click(function(event) {
+			$(this).addClass('active').siblings().removeClass('active');
+		});
+		$('#reset').click(function(){
+			var re_length = $('.M_select').length;
+			for(var i = 0; i < re_length; i++){
+				$('.M_select').eq(i).find('span').eq(0).addClass('active').siblings().removeClass('active');
+			}
+		})
+		$('#determine').click(function(){
+			$('#c_content').hide();
+			$('html').removeClass('popup_prohibit_html');
+		})
+	//会议
+		//活动类型
+		$('#activity_type_btn').click(function(event) {
+			$('#activity_type').show();
+			$('html').addClass('popup_prohibit_html');
+		});
+		$('#activity_type .S_btn').click(function(event) {
+			$('#activity_type').hide();
+			$('html').removeClass('popup_prohibit_html');
+		});
+		//参加人数
+		$('#number_entries_btn').click(function(event) {
+			$('#number_entries').show();
+			$('html').addClass('popup_prohibit_html');
+		});
+		$('#number_entries .S_btn').click(function(event) {
+			$('#number_entries').hide();
+			$('html').removeClass('popup_prohibit_html');
+		});
+		//场地类型
+		$('#site_type_btn').click(function(event) {
+			$('#site_type').show();
+			$('html').addClass('popup_prohibit_html');
+		});
+		$('#site_type .S_btn').click(function(event) {
+			$('#site_type').hide();
+			$('html').removeClass('popup_prohibit_html');
+		});
+		//地理位置
+		$('#g_position_btn').click(function(event) {
+			$('#g_position').show();
+			$('html').addClass('popup_prohibit_html');
+		});
+		$('#g_position .S_btn').click(function(event) {
+			$('#g_position').hide();
+			$('html').removeClass('popup_prohibit_html');
+		});
+
 })

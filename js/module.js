@@ -97,9 +97,9 @@ $(function(){
 	$('.click-open a').click(function(event) {
 		$(this).toggleClass('open');
 		if($(this).hasClass('open')){
-			$('.shopping-option ul').stop().animate({'height':'1.92rem'},800);
+			$('.shopping-option ul').animate({'height':'1.92rem'},300);
 		}else{
-			$('.shopping-option ul').stop().animate({'height':'0.746667rem'},800);
+			$('.shopping-option ul').animate({'height':'0.746667rem'},300);
 		}
 	});
 

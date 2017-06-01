@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="popup_prohibit_html">
     <head>
         <meta charset="utf-8">
         <title>酒店列表页</title>
@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/swiper.css">
         <link rel="stylesheet" href="css/public.css">
         <link rel="stylesheet" href="css/module.css">
+        <link rel="stylesheet" href="css/calendar.css">
 
         <script src="build/flexible_css.debug.js"></script>
         <script src="build/flexible.debug.js"></script>
@@ -16,6 +17,12 @@
         <script src="js/zepto.js"></script>
         <script src="js/public.js"></script>
         <script src="js/module.js"></script>
+        <script src="js/calendar.js"></script>
+        <style type="text/css">
+            a:hover{
+                text-decoration: none;
+            }
+        </style>
     </head>
     <body>
         <!-- 侧边导航栏 -->
@@ -128,11 +135,11 @@
                         <div class="date clearfix">
                             <div class="date-arrive left borderR">
                                 <p>入住</p>
-                                <input type="text" value="2016-12-26" readonly="readonly">
+                                <span>2016-12-28</span>
                             </div>
                             <div class="date-leave left">
                                 <p>离店</p>
-                                <input type="text" value="2016-12-28" readonly="readonly">
+                                <span>2016-12-28</span>
                             </div>
                         </div>
                         <ul class="format clearfix">
@@ -411,6 +418,210 @@
                 <div class="container clearfix">
                     <a id="reset" class="reset" href="javascript:;">重置</a>
                     <a id="determine" class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="calendar">
+            <div class="calendar-content">
+                <div class="newList-co-option calendar-top">
+                    <div class="date clearfix">
+                        <div class="date-arrive left borderR">
+                            <p>入住</p>
+                            <span>2016-12-28</span>
+                        </div>
+                        <div class="date-leave left">
+                            <p>离店</p>
+                            <span>2016-12-28</span>
+                        </div>
+                    </div>
+                    <div class="week-bar"> 
+                        <div class="container">
+                            <ul> 
+                                <li class="weekend">日</li> 
+                                <li>一</li> 
+                                <li>二</li> 
+                                <li>三</li> 
+                                <li>四</li> 
+                                <li>五</li> 
+                                <li class="weekend">六</li> 
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-scroll">
+                    <div class="container">
+                        <div class="calendar-day">
+                            <table>
+                                <thead>
+                                    <tr class="month-bar">
+                                        <th colspan="7">2017年6月</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span><i></i></span></td>
+                                        <td><span><i></i></span></td>
+                                        <td><span><i></i></span></td>
+                                        <td class="optional"><span><i>1</i></span></td>
+                                        <td class="optional"><span><i>2</i></span></td>
+                                        <td class="optional"><span><i>3</i></span></td>
+                                        <td class="optional"><span><i>4</i></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="optional"><span><i>5</i></span></td>
+                                        <td class="optional"><span><i>6</i></span></td>
+                                        <td class="optional"><span><i>7</i></span></td>
+                                        <td class="optional selected-start"><span><i>8</i></span></td>
+                                        <td class="optional selected-line"><span><i>9</i></span></td>
+                                        <td class="optional selected-line"><span><i>10</i></span></td>
+                                        <td class="optional selected-line"><span><i>11</i></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="optional selected-line"><span><i>12</i></span></td>
+                                        <td class="optional selected-line"><span><i>13</i></span></td>
+                                        <td class="optional selected-line"><span><i>14</i></span></td>
+                                        <td class="optional selected-end"><span><i>15</i></span></td>
+                                        <td class="optional"><span><i>16</i></span></td>
+                                        <td class="optional"><span><i>17</i></span></td>
+                                        <td class="optional"><span><i>18</i></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="optional"><span><i>19</i></span></td>
+                                        <td class="optional"><span><i>20</i></span></td>
+                                        <td class="optional"><span><i>21</i></span></td>
+                                        <td class="optional"><span><i>22</i></span></td>
+                                        <td class="optional"><span><i>23</i></span></td>
+                                        <td class="optional"><span><i>24</i></span></td>
+                                        <td class="optional"><span><i>25</i></span></td>
+                                    </tr>
+                                    <tr>                               
+                                        <td class="optional"><span><i>26</i></span></td>
+                                        <td class="optional"><span><i>27</i></span></td>
+                                        <td class="optional"><span><i>28</i></span></td>
+                                        <td class="optional"><span><i>29</i></span></td>
+                                        <td class="optional"><span><i>30</i></span></td>
+                                        <td class="optional"><span><i></i></span></td>
+                                        <td class="optional"><span><i></i></span></td>
+                                    </tr>                                
+                                </tbody>
+                            </table>
+                            <table>
+                                <thead>
+                                    <tr class="month-bar">
+                                        <th colspan="7">2017年6月</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span><i></i></span></td>
+                                        <td><span><i></i></span></td>
+                                        <td><span><i></i></span></td>
+                                        <td class="optional"><span><i>1</i></span></td>
+                                        <td class="optional"><span><i>2</i></span></td>
+                                        <td class="optional"><span><i>3</i></span></td>
+                                        <td class="optional"><span><i>4</i></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="optional"><span><i>5</i></span></td>
+                                        <td class="optional"><span><i>6</i></span></td>
+                                        <td class="optional"><span><i>7</i></span></td>
+                                        <td class="optional"><span><i>8</i></span></td>
+                                        <td class="optional"><span><i>9</i></span></td>
+                                        <td class="optional"><span><i>10</i></span></td>
+                                        <td class="optional"><span><i>11</i></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="optional"><span><i>12</i></span></td>
+                                        <td class="optional"><span><i>13</i></span></td>
+                                        <td class="optional"><span><i>14</i></span></td>
+                                        <td class="optional"><span><i>15</i></span></td>
+                                        <td class="optional"><span><i>16</i></span></td>
+                                        <td class="optional"><span><i>17</i></span></td>
+                                        <td class="optional"><span><i>18</i></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="optional"><span><i>19</i></span></td>
+                                        <td class="optional"><span><i>20</i></span></td>
+                                        <td class="optional"><span><i>21</i></span></td>
+                                        <td class="optional"><span><i>22</i></span></td>
+                                        <td class="optional"><span><i>23</i></span></td>
+                                        <td class="optional"><span><i>24</i></span></td>
+                                        <td class="optional"><span><i>25</i></span></td>
+                                    </tr>
+                                    <tr>                               
+                                        <td class="optional"><span><i>26</i></span></td>
+                                        <td class="optional"><span><i>27</i></span></td>
+                                        <td class="optional"><span><i>28</i></span></td>
+                                        <td class="optional"><span><i>29</i></span></td>
+                                        <td class="optional"><span><i>30</i></span></td>
+                                        <td class="optional"><span><i></i></span></td>
+                                        <td class="optional"><span><i></i></span></td>
+                                    </tr>                                
+                                </tbody>
+                            </table>
+                            <table>
+                                <thead>
+                                    <tr class="month-bar">
+                                        <th colspan="7">2017年6月</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span><i></i></span></td>
+                                        <td><span><i></i></span></td>
+                                        <td><span><i></i></span></td>
+                                        <td class="gray"><span><i>1</i></span></td>
+                                        <td class="gray"><span><i>2</i></span></td>
+                                        <td class="gray"><span><i>3</i></span></td>
+                                        <td class="gray"><span><i>4</i></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="optional"><span><i>5</i></span></td>
+                                        <td class="optional"><span><i>6</i></span></td>
+                                        <td class="optional"><span><i>7</i></span></td>
+                                        <td class="optional"><span><i>8</i></span></td>
+                                        <td class="optional"><span><i>9</i></span></td>
+                                        <td class="optional"><span><i>10</i></span></td>
+                                        <td class="optional"><span><i>11</i></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="optional"><span><i>12</i></span></td>
+                                        <td class="optional"><span><i>13</i></span></td>
+                                        <td class="optional"><span><i>14</i></span></td>
+                                        <td class="optional"><span><i>15</i></span></td>
+                                        <td class="optional"><span><i>16</i></span></td>
+                                        <td class="optional"><span><i>17</i></span></td>
+                                        <td class="optional"><span><i>18</i></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="optional"><span><i>19</i></span></td>
+                                        <td class="optional"><span><i>20</i></span></td>
+                                        <td class="optional"><span><i>21</i></span></td>
+                                        <td class="optional"><span><i>22</i></span></td>
+                                        <td class="optional"><span><i>23</i></span></td>
+                                        <td class="optional"><span><i>24</i></span></td>
+                                        <td class="optional"><span><i>25</i></span></td>
+                                    </tr>
+                                    <tr>                               
+                                        <td class="optional"><span><i>26</i></span></td>
+                                        <td class="optional"><span><i>27</i></span></td>
+                                        <td class="optional"><span><i>28</i></span></td>
+                                        <td class="optional"><span><i>29</i></span></td>
+                                        <td class="optional"><span><i>30</i></span></td>
+                                        <td class="optional"><span><i></i></span></td>
+                                        <td class="optional"><span><i></i></span></td>
+                                    </tr>                                
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-btn">
+                    <a class="cancel" href="javascript:;">取消</a>
+                    <a class="determine" href="javascript:;">确定</a>
                 </div>
             </div>
         </div>

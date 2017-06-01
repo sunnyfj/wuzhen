@@ -18,7 +18,7 @@ aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;p
 
 @font-face { 
   font-family: myfont;
-  src: url('../fonts/DIN Alternate Bold.ttf');
+  src: url('../fonts/DIN-Alternate-Bold.ttf');
 }
 i,em,b,{font-weight: normal;font-style: normal;}
 .scroll-wrap {
@@ -73,7 +73,13 @@ header {
 	top: 0;
 	left: 0;
 	z-index: 200;
+	transform: translate(0px, 0px);
+	transition: transform 0.5s cubic-bezier(0.07, 0.7, 0.63, 0.89);
 }
+/*header.active {
+	transform: translate(85%, 0px);
+	transition: transform 0.5s cubic-bezier(0.07, 0.7, 0.63, 0.89);
+}*/
 .header-l {
 	width: 50%;
 	height: 100%;

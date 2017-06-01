@@ -294,7 +294,7 @@ body .package-btn a {
 	width: 100%;
 }
 .package-evaluate ul li .pe_div .pe_div_l{
-	width: 56%;
+	width: 80%;
 }
 
 .package-evaluate ul li .pe_div .pe_div_l .pe_div_img{
@@ -521,7 +521,7 @@ body .package-btn a {
 	color: #7E808A;
 	padding: 0.133333rem 0;
 }
-.newList-co-option .date div input{
+.newList-co-option .date div span{
 	width: 100%;
 	font-size: 0.48rem;
 	color: #2A2A2F;

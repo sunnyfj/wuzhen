@@ -57,6 +57,7 @@ $(function(){
 		$('body').addClass('sidenav-active');
 		$('.sidenav').addClass('active');
 		$('.pageContent').addClass('active');
+		/*$('header').addClass('active');*/
 		$('.sidenav-opa').fadeIn(300);
 	});
 	$('.sidenav-opa').click(function(event) {
@@ -64,7 +65,7 @@ $(function(){
 		$('.sidenav').removeClass('active');
 		$('.pageContent').removeClass('active');
 		$('.sidenav-opa').removeClass('active');
-
+		/*$('header').removeClass('active');*/
 		$('.sidenav-opa').fadeOut(300);
 	});
 

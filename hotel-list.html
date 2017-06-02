@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="popup_prohibit_html">
+<html lang="en" class="">
     <head>
         <meta charset="utf-8">
         <title>酒店列表页</title>
@@ -17,7 +17,6 @@
         <script src="js/zepto.js"></script>
         <script src="js/public.js"></script>
         <script src="js/module.js"></script>
-        <script src="js/calendar.js"></script>
         <style type="text/css">
             a:hover{
                 text-decoration: none;
@@ -132,7 +131,7 @@
                         <p>51件产品</p>
                     </div>
                     <div class="newList-co-option">
-                        <div class="date clearfix">
+                        <div class="date clearfix" id="choice_date">
                             <div class="date-arrive left borderR">
                                 <p>入住</p>
                                 <span>2016-12-28</span>
@@ -428,9 +427,9 @@
             <div class="calendar-content">
                 <div class="newList-co-option calendar-top">
                     <div class="date clearfix">
-                        <div class="date-arrive left borderR">
+                        <div class="date-arrive left borderR" id="date-arrive">
                             <p>入住</p>
-                            <span>2016-12-28</span>
+                            <span data-reset="5">2016-12-28</span>
                         </div>
                         <div class="date-leave left">
                             <p>离店</p>
@@ -453,8 +452,8 @@
                 </div>
                 <div class="calendar-scroll">
                     <div class="container">
-                        <div class="calendar-day">
-                            <table>
+                        <div class="calendar-day" id="calendar-day">
+                            <!-- <table>
                                 <thead>
                                     <tr class="month-bar">
                                         <th colspan="7">2017年6月</th>
@@ -507,115 +506,7 @@
                                         <td class="optional"><span><i></i></span></td>
                                     </tr>                                
                                 </tbody>
-                            </table>
-                            <table>
-                                <thead>
-                                    <tr class="month-bar">
-                                        <th colspan="7">2017年6月</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><span><i></i></span></td>
-                                        <td><span><i></i></span></td>
-                                        <td><span><i></i></span></td>
-                                        <td class="optional"><span><i>1</i></span></td>
-                                        <td class="optional"><span><i>2</i></span></td>
-                                        <td class="optional"><span><i>3</i></span></td>
-                                        <td class="optional"><span><i>4</i></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="optional"><span><i>5</i></span></td>
-                                        <td class="optional"><span><i>6</i></span></td>
-                                        <td class="optional"><span><i>7</i></span></td>
-                                        <td class="optional"><span><i>8</i></span></td>
-                                        <td class="optional"><span><i>9</i></span></td>
-                                        <td class="optional"><span><i>10</i></span></td>
-                                        <td class="optional"><span><i>11</i></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="optional"><span><i>12</i></span></td>
-                                        <td class="optional"><span><i>13</i></span></td>
-                                        <td class="optional"><span><i>14</i></span></td>
-                                        <td class="optional"><span><i>15</i></span></td>
-                                        <td class="optional"><span><i>16</i></span></td>
-                                        <td class="optional"><span><i>17</i></span></td>
-                                        <td class="optional"><span><i>18</i></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="optional"><span><i>19</i></span></td>
-                                        <td class="optional"><span><i>20</i></span></td>
-                                        <td class="optional"><span><i>21</i></span></td>
-                                        <td class="optional"><span><i>22</i></span></td>
-                                        <td class="optional"><span><i>23</i></span></td>
-                                        <td class="optional"><span><i>24</i></span></td>
-                                        <td class="optional"><span><i>25</i></span></td>
-                                    </tr>
-                                    <tr>                               
-                                        <td class="optional"><span><i>26</i></span></td>
-                                        <td class="optional"><span><i>27</i></span></td>
-                                        <td class="optional"><span><i>28</i></span></td>
-                                        <td class="optional"><span><i>29</i></span></td>
-                                        <td class="optional"><span><i>30</i></span></td>
-                                        <td class="optional"><span><i></i></span></td>
-                                        <td class="optional"><span><i></i></span></td>
-                                    </tr>                                
-                                </tbody>
-                            </table>
-                            <table>
-                                <thead>
-                                    <tr class="month-bar">
-                                        <th colspan="7">2017年6月</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><span><i></i></span></td>
-                                        <td><span><i></i></span></td>
-                                        <td><span><i></i></span></td>
-                                        <td class="gray"><span><i>1</i></span></td>
-                                        <td class="gray"><span><i>2</i></span></td>
-                                        <td class="gray"><span><i>3</i></span></td>
-                                        <td class="gray"><span><i>4</i></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="optional"><span><i>5</i></span></td>
-                                        <td class="optional"><span><i>6</i></span></td>
-                                        <td class="optional"><span><i>7</i></span></td>
-                                        <td class="optional"><span><i>8</i></span></td>
-                                        <td class="optional"><span><i>9</i></span></td>
-                                        <td class="optional"><span><i>10</i></span></td>
-                                        <td class="optional"><span><i>11</i></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="optional"><span><i>12</i></span></td>
-                                        <td class="optional"><span><i>13</i></span></td>
-                                        <td class="optional"><span><i>14</i></span></td>
-                                        <td class="optional"><span><i>15</i></span></td>
-                                        <td class="optional"><span><i>16</i></span></td>
-                                        <td class="optional"><span><i>17</i></span></td>
-                                        <td class="optional"><span><i>18</i></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="optional"><span><i>19</i></span></td>
-                                        <td class="optional"><span><i>20</i></span></td>
-                                        <td class="optional"><span><i>21</i></span></td>
-                                        <td class="optional"><span><i>22</i></span></td>
-                                        <td class="optional"><span><i>23</i></span></td>
-                                        <td class="optional"><span><i>24</i></span></td>
-                                        <td class="optional"><span><i>25</i></span></td>
-                                    </tr>
-                                    <tr>                               
-                                        <td class="optional"><span><i>26</i></span></td>
-                                        <td class="optional"><span><i>27</i></span></td>
-                                        <td class="optional"><span><i>28</i></span></td>
-                                        <td class="optional"><span><i>29</i></span></td>
-                                        <td class="optional"><span><i>30</i></span></td>
-                                        <td class="optional"><span><i></i></span></td>
-                                        <td class="optional"><span><i></i></span></td>
-                                    </tr>                                
-                                </tbody>
-                            </table>
+                            </table> -->
                         </div>
                     </div>
                 </div>
@@ -625,5 +516,6 @@
                 </div>
             </div>
         </div>
+    <script src="js/calendar.js"></script>
     </body>
 </html>

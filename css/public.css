@@ -264,7 +264,8 @@ footer{
 	font-size: 0.373333rem;
 }
 .bottom_bar .cart {
-	background: #FDFDFF;
+	background: #fff;
+	border-top:1px solid #D5DAE1;
 	color: #2A2A2F;
 }
 .bottom_bar .buy {
@@ -402,21 +403,21 @@ footer{
 	background-color: #fff;
 	position: absolute;
 	z-index: 210;
-	transition: 0.5s cubic-bezier(0.07, 0.7, 0.63, 0.89) transform;
+	transition: 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89) transform;
 	transform: translate(-100%, 0px);
 	overflow-y :auto
 }
 .sidenav.active {
 	transform: translate(0px, 0px);
-	transition: 0.5s cubic-bezier(0.07, 0.7, 0.63, 0.89) transform;
+	transition: 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89) transform;
 }
 .pageContent{
 	transform: translate(0px, 0px);
-	transition: transform 0.5s cubic-bezier(0.07, 0.7, 0.63, 0.89);
+	transition: transform 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89);
 }
 .pageContent.active {
 	transform: translate(85%, 0px);
-	transition: transform 0.5s cubic-bezier(0.07, 0.7, 0.63, 0.89);
+	transition: transform 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89);
 }
 .sidenav ul {
 	padding-top:0.213333rem;

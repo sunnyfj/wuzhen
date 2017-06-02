@@ -245,6 +245,7 @@
 	color: #2A2A2F;
 	font-size: 0.373333rem;
 	padding: 0.08rem 0;
+	line-height: 1.7;
 }
 .package-btn {
 	text-align: center;
@@ -334,6 +335,35 @@ body .package-btn a {
 	color: #2A2A2F;
 	line-height: 1.4;
 }
+.package-evaluate ul li .pe_img {
+	width: 100%;
+}
+.package-evaluate ul li .pe_img div{
+	width: 30%;
+	height: 2.133333rem;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 0.213333rem;
+	margin-bottom:0.213333rem;
+	float: left;
+}
+.package-evaluate ul li .pe_img div img{
+	width: 100%;
+	height: 100%;
+}
+.package-evaluate ul li .pe_reply {
+	width: 100%;
+	padding: 0.24rem 0.32rem 0.4rem;
+	background-color: #F3F4F8;
+	margin-top: 0.213333rem;
+	font-size: 28px;
+	color: #7E808A;
+}
+.package-evaluate ul li .pe_reply span{
+	color: #000;
+}
+
+
 .package-evaluate .package-btn a{
 	margin-bottom: 0;
 }
@@ -1273,13 +1303,33 @@ body .package-btn a {
 }
 
 /*桐乡市民游乌镇*/
+/*房间详情页*/
 
-
-/*@media (min-width: 1242px) and (max-width: 500px)  {
-
-  .t-notice-info dt,.t-notice-info dd {
-	font-size: 200px;
+.room-details-date {
+	background: #F3F4F8;margin: 0.48rem 0;
+}
+.room-co-option {
+	border: none;padding: 0.32rem 0;
+}
+.room-details-info ul li{
+	font-size: 0.373333rem;
+	color: #7E808A;
+	line-height: 1.7;
+	padding: 0.106667rem 0;
+}
+.room-details-info ul li span{
+	color: #000;
+}
+.room-detailsNotice p ,.room-detailsPrompt p {
+	font-size: 0.373333rem;
 	color: #2A2A2F;
 	line-height: 1.7;
-	}
-}*/
+}
+
+
+
+
+
+
+
+/*房间详情页*/

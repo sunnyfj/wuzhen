@@ -5,6 +5,7 @@
 	width: 100%;
 	height:100%;
 	background-color:rgba(0,0,0,.7);
+	display: none;
 }
 .calendar-content {
 	background-color: #fff;
@@ -132,7 +133,8 @@
 
 .calendar-btn a.cancel {
 	color: #2A2A2F;
-	background: #FDFDFF;
+	background: #fff;
+	border-top:1px solid #D5DAE1;
 }
 .calendar-btn a.determine {
 	color: #fff;

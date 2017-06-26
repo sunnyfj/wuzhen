@@ -8,57 +8,42 @@
 'use strict';
 $(function(){
 	//回到顶部
-	function initTopHoverTree(hvtid, times) {
-		$("#" + hvtid).on("click", function () { goTopHovetree(times); })
+	
+	window.onscroll=function(){
+	    if($(window).scrollTop()>100){
+	         $('#gotop').show();
+	    }else{
+	         $('#gotop').hide();
+	    }
+	} 
+	$('#gotop').click(function(){
+	    scroll('0px', 300);	
+	});
+	function scroll(scrollTo, time) {
+	    var scrollFrom = parseInt($(window).scrollTop()),
+	        i = 0,
+	        runEvery = 5; // run every 5ms
 
-		$(window).scroll(function () {
-			if ($(window).scrollTop() > 268) {
-				$("#" + hvtid).show();
-			}
-			else {
-				$("#" + hvtid).hide();
-			}
-		});
+	    scrollTo = parseInt(scrollTo);
+	    time /= runEvery;
+
+	    var interval = setInterval(function () {
+	        i++;
+
+	        $(window).scrollTop((scrollTo - scrollFrom) / time * i + scrollFrom)
+
+	        if (i >= time) {
+	            clearInterval(interval);
+	        }
+	    }, runEvery);
 	}
-
-	//返回顶部动画
-	//goTop(500);//500ms内滚回顶部
-	function goTopHovetree(times) {
-		if (!!!times) {
-		$(window).scrollTop(0);
-			return;
-		}
-
-	var sh = $('body').scrollTop();//移动总距离
-	var inter = 13.333;//ms,每次移动间隔时间
-	var forCount = Math.ceil(times / inter);//移动次数
-	var stepL = Math.ceil(sh / forCount);//移动步长
-	var timeId = null;
-	function aniHovertree() {
-		!!timeId && clearTimeout(timeId);
-		timeId = null;
-		//console.log($('body').scrollTop());
-		if ($('body').scrollTop() <= 0 || forCount <= 0) {//移动端判断次数好些，因为移动端的scroll事件触发不频繁，有可能检测不到有<=0的情况
-		$('body').scrollTop(0);
-		return;
-		}
-		forCount--;
-		sh -= stepL;
-		$('body').scrollTop(sh);
-		timeId = setTimeout(function () { aniHovertree(); }, inter);
-		}
-		aniHovertree();
-	}
-	initTopHoverTree("gotop",300); 
-
-
 	//侧边导航栏
 	$('#header-btn').click(function(event) {
 		$('body').addClass('sidenav-active');
 		$('.sidenav').addClass('active');
 		$('.pageContent').addClass('active');
 		/*$('header').addClass('active');*/
-		$('.sidenav-opa').fadeIn(300);
+		$('.sidenav-opa').fadeIn(400);
 	});
 	$('.sidenav-opa').click(function(event) {
 		$('body').removeClass('sidenav-active');
@@ -66,12 +51,12 @@ $(function(){
 		$('.pageContent').removeClass('active');
 		$('.sidenav-opa').removeClass('active');
 		/*$('header').removeClass('active');*/
-		$('.sidenav-opa').fadeOut(300);
+		$('.sidenav-opa').fadeOut(400);
 	});
 
 	//list页删选
 		//单页删选
-		$('.S_PageSelection').find('li').click(function(){
+		$('.M_PageSelection_content').find('li').click(function(){
 			$(this).addClass('active').siblings().removeClass('active');
 		})
 
@@ -81,7 +66,7 @@ $(function(){
 			$('#cf_content').show();
 			$('html').addClass('popup_prohibit_html');
 		});
-		$('#cf_content .S_btn').click(function(event) {
+		$('#cf_content .determine').click(function(event) {
 			$('#cf_content').hide();
 			$('html').removeClass('popup_prohibit_html');
 		});
@@ -91,7 +76,7 @@ $(function(){
 			$('#fn_content').show();
 			$('html').addClass('popup_prohibit_html');
 		});
-		$('#fn_content .S_btn').click(function(event) {
+		$('#fn_content .determine').click(function(event) {
 			$('#fn_content').hide();
 			$('html').removeClass('popup_prohibit_html');
 		});
@@ -104,13 +89,13 @@ $(function(){
 		$('.M_select span').click(function(event) {
 			$(this).addClass('active').siblings().removeClass('active');
 		});
-		$('#reset').click(function(){
+		$('#c_content .reset').click(function(){
 			var re_length = $('.M_select').length;
 			for(var i = 0; i < re_length; i++){
 				$('.M_select').eq(i).find('span').eq(0).addClass('active').siblings().removeClass('active');
 			}
 		})
-		$('#determine').click(function(){
+		$('#c_content .determine').click(function(){
 			$('#c_content').hide();
 			$('html').removeClass('popup_prohibit_html');
 		})
@@ -120,7 +105,7 @@ $(function(){
 			$('#activity_type').show();
 			$('html').addClass('popup_prohibit_html');
 		});
-		$('#activity_type .S_btn').click(function(event) {
+		$('#activity_type .determine').click(function(event) {
 			$('#activity_type').hide();
 			$('html').removeClass('popup_prohibit_html');
 		});
@@ -129,7 +114,7 @@ $(function(){
 			$('#number_entries').show();
 			$('html').addClass('popup_prohibit_html');
 		});
-		$('#number_entries .S_btn').click(function(event) {
+		$('#number_entries .determine').click(function(event) {
 			$('#number_entries').hide();
 			$('html').removeClass('popup_prohibit_html');
 		});
@@ -138,7 +123,7 @@ $(function(){
 			$('#site_type').show();
 			$('html').addClass('popup_prohibit_html');
 		});
-		$('#site_type .S_btn').click(function(event) {
+		$('#site_type .determine').click(function(event) {
 			$('#site_type').hide();
 			$('html').removeClass('popup_prohibit_html');
 		});
@@ -147,7 +132,7 @@ $(function(){
 			$('#g_position').show();
 			$('html').addClass('popup_prohibit_html');
 		});
-		$('#g_position .S_btn').click(function(event) {
+		$('#g_position .determine').click(function(event) {
 			$('#g_position').hide();
 			$('html').removeClass('popup_prohibit_html');
 		});

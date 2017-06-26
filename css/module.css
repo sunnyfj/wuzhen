@@ -28,8 +28,9 @@
 	margin-left:-0.613333rem;
 }
 .main_layout {
-	width: 88.8%;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 }
 
 .title_share h1{
@@ -40,8 +41,15 @@
 .title_share p{
 	font-size: 0.373333rem;
 	color: #7E808A;
-	padding: 0.08rem 0;
-	line-height: 1.4;
+	/*padding: 0.08rem 0;
+	line-height: 1.4;*/
+}
+.title_share .btn-more{
+	padding-top: 0.213333rem;
+}
+.title_share .btn-more a{
+	color: #f00;
+	text-decoration: none;
 }
 .shopping-detail .btn-more{
 	padding-top: 0.213333rem;
@@ -105,17 +113,17 @@
 	height: 1.066667rem;
 	border: 1px solid #D5DAE1;
 }
-.choice-date-number .number input{
+.choice-date-number .number span{
 	width: 1.066667rem;
 	height: 100%;
-	background-color: #D5DAE1;
+	background-color: #F3F4F8;
 	border: none;
 	vertical-align: top;
 	float: left;
 	text-align: center;
-	line-height: 0.9rem;
-	font-size: 0.32rem;
-}	
+	line-height: 1.066667rem;
+	font-size: 0.373333rem;
+}
 .choice-date-number .number a {
 	display: inline-block;
 	width: 1.066667rem;
@@ -133,10 +141,10 @@
 	border: 1px solid #D5DAE1;
 }
 .choice-date .date .time {
-	height: 1.066667rem;
+	padding: 0.346667rem 0;
 	width: 3.013333rem;
-	line-height: 1.066667rem;
-	background-color: #D5DAE1;
+	line-height: 1;
+	background-color: #F3F4F8;
 	float: left;
 	border: none;
 	text-indent: 1em;
@@ -152,6 +160,8 @@
 	color: #7E808A;
 	text-decoration: none;
 	font-size: 0.506667rem;
+    background: #fff url(../images/format1.png) no-repeat center center;
+    background-size:0.32rem 0.32rem; 
 }
 
 .shopping-munber {
@@ -161,7 +171,7 @@
 .shopping-munber .modify {
 	border:  1px solid #D5DAE1;
 }
-.shopping-munber .modify input{
+.shopping-munber .modify a{
 	display: block;
 	width: 1.093333rem;
 	height: 1.066667rem;
@@ -173,15 +183,32 @@
 	border: none;
 	background-color: #fff;
 }
-.shopping-munber .modify input[type='button']{
+.shopping-munber .modify a.reduce,.shopping-munber .modify a.add{
 	font-size: 0.666667rem;
+	line-height: 1.0rem;
 }
-.shopping-munber .modify input[type='text']{
-	background-color: #D5DAE1;
+.shopping-munber .modify a.shows{
+	background-color: #F3F4F8;
 }
 
-
-
+.shopping-dc-padding {
+	padding: 0.426667rem 0;
+	border-bottom: 1px solid #D5DAE1;
+}
+/*.shopping-dc-padding .choice-title {
+	color: #2A2A2F;
+	font-size: 0.426667rem;
+}*/
+.shopping-dm-padding {
+	width: 100%;
+	padding-bottom: 0.426667rem;
+}
+/*.shopping-dm-padding .choice-title {
+	margin-bottom:0;
+	line-height: 1.066667rem;
+	color: #2A2A2F;
+	font-size: 0.426667rem;
+}*/
 
 .choice-package {
 	padding-bottom: 0.426667rem;
@@ -279,7 +306,7 @@ body .package-btn a {
     padding: 0.08rem 0;
 }
 .package-route div p span {
-	padding-left: 30px;
+	padding-left: 0.4rem;
 }
 .package-evaluate {
 	padding: 0.64rem 0;
@@ -287,7 +314,7 @@ body .package-btn a {
 .package-evaluate ul li{
 	width: 100%;
 	margin-bottom: 0.373333rem;
-}	
+}
 .package-evaluate ul li.active{
 	border-bottom: 1px solid #D5DAE1;
 }
@@ -356,7 +383,7 @@ body .package-btn a {
 	padding: 0.24rem 0.32rem 0.4rem;
 	background-color: #F3F4F8;
 	margin-top: 0.213333rem;
-	font-size: 28px;
+	font-size: 0.373333rem;
 	color: #7E808A;
 }
 .package-evaluate ul li .pe_reply span{
@@ -367,7 +394,46 @@ body .package-btn a {
 .package-evaluate .package-btn a{
 	margin-bottom: 0;
 }
-.more-comment,.more-package,.more-trip{
+.Recommend {
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 0.96rem;
+}
+.Recommend .swiper-slide {
+	width: 3.733333rem;
+}
+.Recommend .swiper-slide .Recommend-img{
+	width: 3.733333rem;
+	height: 3.733333rem;
+	position: relative;
+}
+.Recommend .swiper-slide .Recommend-img img{
+	width: 100%;
+	height: 100%;
+}
+.Recommend .swiper-slide h4 {
+	font-size: 0.426667rem;
+	color: #000;
+	padding-top:0.426667rem;
+	padding-bottom:0.106667rem;
+}
+.Recommend .swiper-slide p {
+	font-size: 0.373333rem;
+	color: #000;
+}
+.Recommend .swiper-slide p span{
+	color: #7E808A;
+	padding-left: 0.24rem;
+}
+
+
+
+
+
+
+
+
+.more-comment,.more-package,.more-trip,.more-H-detail,.more-detailsNotice,.more-detailsPrompt{
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -379,11 +445,12 @@ body .package-btn a {
 	display: none;
 	padding-bottom: 1.333333rem;
 }
-.more-comment-content ,.more-package-content,.more-trip-content{
-	width: 88.8%;
-	margin: 0 auto;
+.more-comment-content ,.more-package-content,.more-trip-content,.more-H-detail-content{
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 }
-.more-comment-close ,.more-package-close,.more-trip-close{
+.more-comment-close ,.more-package-close,.more-trip-close,.more-H-detail-close,.more-detailsNotice-close,.more-detailsPrompt-close{
 	width: 100%;
 	height: 1.333333rem;
 	background-color: #fff;
@@ -428,7 +495,7 @@ body .package-btn a {
 	padding-bottom: 0.32rem;
 }
 .more-trip-content .mtc_block h4 span{
-	padding-left: 30px;
+	padding-left: 0.4rem;
 }
 .more-trip-content .mtc_block dl{
 	font-size: 0.373333rem;
@@ -446,7 +513,7 @@ body .package-btn a {
 	margin-right: 0.4rem;
 }
 .more-trip-content .mtc_block dl dt span{
-	padding-left: 30px;
+	padding-left: 0.4rem;
 }
 
 .more-trip-content .mtc_block dl dd{
@@ -461,8 +528,9 @@ body .package-btn a {
 	width: 100%;
 }
 .newList-content {
-	width: 88.8%;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 	padding-top: 1.333333rem;
 }
 .newList-title {
@@ -479,8 +547,28 @@ body .package-btn a {
     color: #000;
     letter-spacing: 0.8px;
 }
+.newList-title h4.newList-title-hotel{
+    background: url(../images/product2.png) no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+.newList-title h4.food{
+    background: url(../images/productfood.png) no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
 .newList-title h4.conference-title{
     background: url(../images/banner.png) no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+.newList-title h4.conference-core{
+    background: url(../images/conference-core.png) no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+.newList-title h4.conference-form{
+    background: url(../images/conference-form.png) no-repeat;
     -webkit-background-size: contain;
     background-size: contain;
 }
@@ -536,12 +624,56 @@ body .package-btn a {
 	border-bottom: 1px solid #7E808A;
 	padding: 0.48rem 0;
 }
+.newList-co-option .shopping-tab {
+	border-bottom: 1px solid #D5DAE1;
+}
+.newList-co-option .shopping-date {
+	padding-top:  0.426667rem;
+}
+
+
+
+.newList-co-option .single-date {
+	width: 100%;
+}
+.single-date-arrive {
+	width: 100%;
+	text-align: center;
+	padding: 0 0.533333rem;
+}
+.single-date-arrive p {
+	font-size: 0.32rem;
+	color: #7E808A;
+	line-height: 0.48rem;
+}
+.single-date-arrive span {
+	font-size: 0.48rem;
+	color: #2A2A2F;
+	line-height: 0.48rem;
+}
+.single-date-arrive i{
+	display: block;
+	width: 0.32rem;
+	height: 0.32rem;
+	line-height: 0.48rem;
+}
+.single-date-arrive i img{
+	width: 0.32rem;
+	height: 0.32rem;
+	transform: rotateZ(-90deg);
+}
+
+
+
 .newList-co-option .date{
 	padding-bottom: 0.346667rem;
+	text-align: center;
 }
 .newList-co-option .date div {
 	width: 50%;
 	text-align: center;
+	display: inline-block;
+	vertical-align: top;
 }
 .newList-co-option .date div.borderR {
 	border-right: 1px solid #D5DAE1;
@@ -563,7 +695,7 @@ body .package-btn a {
 .newList-co-option .format {
 	margin-top:0.426667rem;
 	border-top:1px solid #D5DAE1;
-	padding-top: 0.213333rem;
+	padding-top: 0.32rem;
 	font-size: 0.373333rem;	color: #7E808A;
 }
 .newList-co-option .format li{
@@ -602,6 +734,7 @@ body .package-btn a {
 .shopping-option {
 	padding-bottom: 0.426667rem;
 }
+
 .shopping-option ul{
 	width: 7.733333rem;
 	height: 0.746667rem;
@@ -618,12 +751,20 @@ body .package-btn a {
 	margin-right: 0.4rem;
 	margin-bottom: 0.426667rem;
 }
+.shopping-option1 ul{
+	width:100%;
+	text-align:center;
+}
+.shopping-option1 ul li{
+	float:none;
+	display: inline-block;
+}
 .shopping-option ul li a{
 	display: block;
 	width: 2.08rem;
-	height: 0.746667rem;
+	padding: 0.186667rem 0;
 	text-align: center;
-	line-height: 0.746667rem;
+	line-height: 1;
 	color: #2A2A2F;
 	text-decoration: none;
 }
@@ -685,8 +826,9 @@ body .package-btn a {
 	top: 0;
 	background-color: rgba(0,0,0,.7);
 	color: #fff;
-	padding: 0.04rem 0.053333rem;
+	padding: 0.06rem 0.053333rem;
 	font-size: 0.373333rem;
+	line-height: 1;
 }
 .nio-top-l img{
 	width: 3.733333rem;
@@ -698,10 +840,15 @@ body .package-btn a {
 	width: 5.146667rem;
 }
 .nio-top-r h4{
+	width:85%;
 	font-size: 0.426667rem;
 	color: #2A2A2F;
-	padding-bottom: 0.2rem;
+	margin-bottom: 0.2rem;
 	padding-top: 0.133333rem;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
 }
 .nio-top-r h4 a {
 	color: #2A2A2F;
@@ -712,6 +859,15 @@ body .package-btn a {
 	color: #000000;
 	padding-bottom: 0.666667rem;
 }
+.nio-top-r .shopping-h5 {
+	padding-bottom: 0.08rem;
+}
+.nio-top-r .shopping-p {
+	padding: 0.133333rem 0 0.24rem;
+}
+.shopping-oneof {
+	border-bottom: 1px solid #D5DAE1;
+}
 .nio-top-r h5 span{
 	font-size: 0.746667rem;
 	color: #2A2A2F;
@@ -720,7 +876,7 @@ body .package-btn a {
 .nio-top-r h5 i{
 	font-style: normal;
 	color: #7E808A;
-	padding-left: 16px;
+	padding-left: 0.213333rem;
 }
 .nio-top-r p {
 	font-size: 0.32rem;
@@ -733,16 +889,27 @@ body .package-btn a {
 .case-list-info {
 	border-bottom: 1px solid #D5DAE1;
 }
-.nio-top .collection{
+.collection{
 	width: 0.64rem;
 	height: 0.64rem;
 	position: absolute;
-	right: 5px;
-	top: 5px;
+	right: 0.066667rem;
+	top: 0.066667rem;
+	background:url(../images/collection.png) no-repeat;
+	background-size: cover;
+	z-index: 20;
 }
-.nio-top .collection img {
+.collection.details-collection {
+	right: 0.2rem;
+	top: 0.2rem;
+}
+.collection.active{
+	background:url(../images/collection-active.png) no-repeat;
+	background-size: cover;
+}
+/*.nio-top .collection img {
 	width: 100%;
-}
+}*/
 .nio-bottom {
 	background: #F3F4F8;
 }
@@ -766,6 +933,10 @@ body .package-btn a {
 	color: #2A2A2F;
 	padding-bottom: 0.2rem;
 }
+.nio-bottom ul li .li-text h3 a{
+	font-size: 0.426667rem;
+	color: #2A2A2F;
+} 
 .nio-bottom ul li .li-text p{
 	font-size: 0.32rem;
 	color: #9B9B9B;
@@ -784,14 +955,13 @@ body .package-btn a {
 }
 .nio-bottom ul li .li-purchase a{
 	width: 2.373333rem;
-	height: 0.693333rem;
+	padding: 0.213333rem 0;
 	display: block;
     border: 1px solid #7E808A;
     text-align: center;
     font-size: 0.266667rem;
     color: #2A2A2F;
     text-decoration: none;
-    line-height:  0.65rem;
     box-sizing:border-box;
 }
 .nio-bottom ul li .li-purchase a.btn-shoppingCart {
@@ -802,6 +972,9 @@ body .package-btn a {
 	color: #FDFDFF;
 	border: none;
 }
+
+
+
 .nio-bottom-btn {
 	padding-bottom:  0.64rem;
 	padding-top: 0.426667rem;
@@ -812,9 +985,8 @@ body .package-btn a {
 	display: inline-block;
 	border: 1px solid #7E808A;
 	text-align: center;
-	padding: 0 0.4rem;
-	height: 0.693333rem;
-	line-height: 0.693333rem;
+	padding: 0.213333rem 0.4rem;
+	line-height: 1;
 	text-decoration: none;
 	font-size: 0.266667rem;
 	color: #7E808A;
@@ -853,16 +1025,20 @@ body .package-btn a {
 }
 .contactOrDetails div{
 	width: 1.973333rem;
-	height: 0.693333rem;
 	text-align: center;
-	line-height: 0.693333rem;
 	font-size: 0.266667rem;
 	float: left;
+}
+.contactOrDetails div a {
+	display: inline-block;
+	width: 100%;
+	padding: 0.16rem 0;
 }
 .contactOrDetails div:nth-child(1){
 	margin-right: 0.213333rem;
 }
 .contactOrDetails div.contact {
+	border: 1px solid #FF1431;
 	background-color: #FF1431;
 	color: #fff;
 }
@@ -879,8 +1055,9 @@ body .package-btn a {
 	text-decoration: none;
 }
 .nio-bottom-conference {
-	width: 88.8%;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 	border-bottom: 1px solid #D5DAE1;
 }
 .nio-bottom-conference dl{
@@ -899,7 +1076,7 @@ body .package-btn a {
 .nio-bottom-conference dl dt div,.nio-bottom-conference dl dd div{
 	width: 49%;
 	height: 0.96rem;
-	line-height:0.96rem; 
+	line-height:0.96rem;
 	display: inline-block;
 	vertical-align: middle;
 	text-align: left;
@@ -936,7 +1113,7 @@ body .package-btn a {
 }
 .cfc-activity {
 	padding-bottom: 0.426667rem;
-	font-size: 28px;
+	font-size: 0.373333rem;
 	color: #2A2A2F;
 	line-height: 1.7;
 }
@@ -944,11 +1121,12 @@ body .package-btn a {
 	padding: 0.426667rem 0;
 }
 .cfc-introduce .line {
-	width: 88.8%;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 	height: 2px;
 	background-color: #D5DAE1;
-	margin-bottom: 32px;
+	margin-bottom: 0.426667rem;
 }
 .cfc-activity ol li {
 	font-size: 0.373333rem;
@@ -974,7 +1152,7 @@ body .package-btn a {
 .cfc-introduce dl dt div,.cfc-introduce dl dd div ,.other-item-table dl dt div ,.other-item-table dl dd div{
 	width: 33.3%;
 	height: 0.96rem;
-	line-height:0.96rem; 
+	line-height:0.96rem;
 	vertical-align: middle;
 	text-align: left;
 	padding-left: 0.213333rem;
@@ -1028,7 +1206,7 @@ body .package-btn a {
 .other-item-cont-r h5{
 	font-size: 0.373333rem;
 	color: #000000;
-	padding-bottom: 0.213333rem; 
+	padding-bottom: 0.213333rem;
 }
 .other-item-cont-r h5 span{
 	font-size: 0.533333rem;
@@ -1038,7 +1216,7 @@ body .package-btn a {
 .other-item-cont-r h5 i{
 	font-style: normal;
 	color: #7E808A;
-	padding-left: 16px;
+	padding-left: 0.213333rem;
 }
 .other-item-cont-r p {
 	font-size: 0.32rem;
@@ -1049,7 +1227,11 @@ body .package-btn a {
 	padding-right: 0.213333rem;
 }
 /*列表页*/
-
+.datails-text-hidden {
+	height: 1.04rem;
+	overflow: hidden;
+	transition: 0.3s ease all;
+}
 .hotel-introduce p{
 	font-size: 0.373333rem;
 	color: #7E808A;
@@ -1061,16 +1243,25 @@ body .package-btn a {
 	color: #f00;
 	text-decoration: none;
 }
+.hotel-introduce .choice-title {
+	margin-bottom: 0;
+}
 .hotel-introduce .time,.hotel-introduce .address{
 	padding: 0.106667rem 0;
 }
 .hotel-introduce .time span,.hotel-introduce .address span{
+	display: inline-block;
+	float: left;
 	padding-right: 0.426667rem;
 }
 .hotel-introduce .time b,.hotel-introduce .address b{
+	display: inline-block;
+	float: left;
+	width: 76%;
 	font-weight: normal;
 	font-size: 0.373333rem;
 	color: #2A2A2F;
+	padding: 0.08rem 0;
 }
 .margin-tb {
 	margin: 0.426667rem 0;
@@ -1083,6 +1274,32 @@ body .package-btn a {
 .mapPsition img {
 	width: 100%;
 	height: 100%;
+}
+.H-detail {
+	width: 100%;
+	margin-top: 0.64rem;
+}
+.H-detailInfo ul {
+	padding-bottom: 0.213333rem;
+	text-align: center;
+}
+.H-detailInfo ul li{
+	display: inline-block;
+	vertical-align: top;
+	width: 1.386667rem;
+	text-align:center;
+	margin-right:0.32rem;
+}
+.H-detailInfo ul li:last-child {
+	margin-right:0;
+}
+.H-detailInfo ul li img {
+	width: 0.8rem;
+	height: 0.8rem;
+}
+.H-detailInfo ul li div {
+	font-size: 0.32rem;
+	color: #2A2A2F;
 }
 
 .hotel-content-img {
@@ -1116,7 +1333,7 @@ body .package-btn a {
 .whole-evaluate ul li span{
 	font-size: 0.373333rem;
 	color: #000;
-	padding-left: 16px;
+	padding-left: 0.213333rem;
 }
 
 /*会议提交活动信息*/
@@ -1140,23 +1357,23 @@ body .package-btn a {
 .form-list-modular .small p{
 	font-size: 0.373333rem;
 	color: #2A2A2F;
-	padding: 0.213333rem 0; 
+	padding: 0.213333rem 0;
 }
 .form-list-modular .small input{
 	width: 100%;
-	height: 1.066667rem;
-	line-height: 1.066667rem;
+	padding: 0.346667rem 0 0.346667rem 0.213333rem;
+	line-height: 1;
 	background: #F3F4F8;
 	border:1px solid #D5DAE1;
-	padding-left: 0.213333rem;
+	/*padding-left: 0.213333rem;*/
 	font-size: 0.373333rem;
 	color: #7E808A;
 }
 .form-list-modular .small span{
 	display: inline-block;
 	width: 100%;
-	height: 1.066667rem;
-	line-height: 1.066667rem;
+	padding: 0.346667rem 0;
+	line-height: 1;
 	background: #F3F4F8;
 	border:1px solid #D5DAE1;
 	padding-left: 0.213333rem;
@@ -1170,6 +1387,79 @@ body .package-btn a {
 	color: #7E808A;
 	font-size: 0.373333rem;
 }
+
+/*会议活动详情*/
+.activity-details {
+	width: 100%;
+	border: 1px solid #D5DAE1;
+	margin-bottom:0.64rem;
+}
+.activity-details .ad-title {
+	width: 100%;
+	background: #F3F4F8;
+	border-bottom: 1px solid #D5DAE1;
+	display: flex;
+	padding: 0.213333rem 0.213333rem;
+	position: relative;
+}
+.activity-details .ad-title h6{
+	font-size: 0.426667rem;
+	color: #2A2A2F;
+	width: 6.666667rem;
+	white-space:nowrap;
+	text-overflow:ellipsis; 
+	overflow:hidden;
+	line-height: 1.1;
+}
+.activity-details .ad-title span{
+	display: block;
+	padding: 0.106667rem 0.266667rem;
+	line-height: 1;
+	font-size: 0.266667rem;
+	color: #2A2A2F;
+	background: #FFFFFF;
+	border: 1px solid #2A2A2F;
+	border-radius: 200px;
+	position: absolute;
+	right:0.213333rem;
+	margin-top: -0.026667rem;
+}
+.activity-details .ad-info {
+	padding: 0.213333rem;
+	border-bottom: 1px solid #D5DAE1;
+}
+.activity-details .ad-info li {
+	padding: 0.106667rem 0;
+}
+.activity-details .ad-info li b{
+	display:inline-block;
+	font-weight: normal;
+	height: 100%;
+	vertical-align: top;
+	font-size: 0.32rem;
+	color: #7E808A;
+	float: left;
+}
+.activity-details .ad-info li span{
+	display:inline-block;
+	vertical-align: top;
+	font-size: 0.32rem;
+	float: left;
+	width: 73%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*会议提交活动信息*/
 
 /*桐乡市民游乌镇*/
@@ -1204,7 +1494,7 @@ body .package-btn a {
 .t-program ul li b {
 	position: absolute;
 	left: 0.08rem;
-	top:0.613333rem;
+	top:0.693333rem;
 	height: 0.533333rem;
 	border-left: 2px dotted #979797;
 }
@@ -1234,12 +1524,12 @@ body .package-btn a {
 }
 .t-prompt-btn {
 	display: block;
-	margin: 0 auto; 
+	margin: 0 auto;
 	width: 3.2rem;
-	height: 0.853333rem;	
+	padding: 0.306667rem 0;
 	border: 1px solid #2A2A2F;
 	text-align: center;
-	line-height: 0.853333rem;	
+	line-height:1;
 	font-size: 0.266667rem;
 	color: #2A2A2F;
 	text-decoration: none;
@@ -1275,14 +1565,15 @@ body .package-btn a {
     height: 1.066667rem;
     width: 1.066667rem;
     position: absolute;
-    right: 1px;
+    border: 1px solid #D5DAE1;
+    border-left:none;
+    right: 0;
     top: 0;
-    text-align: center;
-    line-height: 1.066667rem;
     color: #7E808A;
     text-decoration: none;
-    font-size: 0.506667rem;
-    background-color: #fff;
+    background: #fff url(../images/format1.png) no-repeat center center;
+    background-size:0.32rem 0.32rem; 
+    box-sizing: border-box;
 }
 
 .co-option .options{
@@ -1294,7 +1585,7 @@ body .package-btn a {
 	font-size: 0.373333rem;
 	color: #2A2A2F;
 	padding: 0.106667rem 0.266667rem;
-	line-height: 1.1;
+	line-height: 1;
 	background: #F3F4F8;
 	border-radius: 200px;
 	margin-right: 0.426667rem;
@@ -1310,15 +1601,15 @@ body .package-btn a {
 	color: #FF1431;
 }
 .t-submit {
-	width:100%;	
+	width:100%;
 	padding-bottom: 0.64rem;
 }
 .t-submit button{
-	width:100%;	
+	width:100%;
 	height: 1.066667rem;
 	background: #FF1431;
 	font-size: 0.373333rem;
-	color: #FDFDFF;	
+	color: #FDFDFF;
 	border: none;
 }
 
@@ -1346,10 +1637,19 @@ body .package-btn a {
 	line-height: 1.7;
 }
 
-
-
-
-
-
-
 /*房间详情页*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

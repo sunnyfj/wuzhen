@@ -34,6 +34,7 @@ i,em,b,{font-weight: normal;font-style: normal;}
     display: -webkit-box;
     display: box;
 }
+
 body .mybtn {
 	display: inline-block;
 	border: 1px solid #7E808A;
@@ -57,13 +58,47 @@ html {
 	height: 100%;
 	overflow: hidden;
 }
+.more_prohibit_html {
+	height: 100%;
+	overflow: hidden;
+}
 .container {
-	width: 88.8%;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 }
 .txt_color {
 	color: #000000;
 }
+.btn-shoppingCart {
+	width: 2.373333rem;
+	padding: 0.213333rem 0;
+	display: block;
+    border: 1px solid #7E808A;
+    text-align: center;
+    font-size: 0.266667rem;
+    color: #2A2A2F;
+    text-decoration: none;
+    line-height:  1;
+    box-sizing:border-box;
+	margin-bottom: 0.213333rem;
+}
+.btn-purchase {
+	width: 2.373333rem;
+	padding: 0.213333rem 0;
+	display: block;
+    border: 1px solid #7E808A;
+    text-align: center;
+    font-size: 0.266667rem;
+    color: #2A2A2F;
+    text-decoration: none;
+    line-height:  1;
+    box-sizing:border-box;
+	background: #FF1431;
+	color: #FDFDFF;
+	border: none;
+}
+
 /*头部*/
 header {
 	width: 100%;
@@ -129,8 +164,9 @@ footer{
 	background-color: #2A2A2F;
 }
 .footer-content {
-	width: 88.8%;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 }
 .footer-contact {
 	width: 100%;
@@ -163,7 +199,7 @@ footer{
 	padding-left: 0.8rem;
 }
 .footer-introduce ul {
-	padding: 0.213333rem 0 0.213333rem 60px;
+	padding: 0.213333rem 0 0.213333rem 0.8rem;
 }
 .footer-introduce ul li {
 	line-height: 1.6;
@@ -186,8 +222,9 @@ footer{
 	padding-bottom: 1.333333rem;
 }
 .footer2-content {
-	width: 88.8%;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 }
 .footer2-contact {
 	border-bottom: 1px solid #7E808A;
@@ -290,7 +327,7 @@ footer{
 	font-size: 0.266667rem;
 	color: #7E808A;
 	padding-left: 0.426667rem;
-	padding-top: 0.213333rem;
+	padding-top: 0.293333rem;
 	padding-bottom: 0.213333rem;
 }
 .contactUs .contactUs-mode p {
@@ -347,10 +384,10 @@ footer{
 .appointed-link a {
 	display: block;
 	width: 1.866667rem;
-	height: 0.693333rem;
+	padding: 0.213333rem 0;
 	background: #2A2A2F;
 	text-align: center;
-	line-height: 0.693333rem;
+	line-height: 1;
 	font-size: 0.266667rem;
 	color: #FDFDFF;
 }
@@ -371,8 +408,8 @@ footer{
 	margin-top:-0.213333rem;
 }
 .appointed-text .icon.active i {
-	background-color: #f57d00;
-	border: 1px solid #f57d00;
+	background-color: #2A2A2F;
+	border: 1px solid #2A2A2F;
 }
 .appointed-text .t-notice-p {
 	padding: 0.213333rem 0 0.213333rem 0.213333rem;
@@ -405,7 +442,8 @@ footer{
 	z-index: 210;
 	transition: 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89) transform;
 	transform: translate(-100%, 0px);
-	overflow-y :auto
+	overflow-y :auto;
+	-webkit-overflow-scrolling : touch;
 }
 .sidenav.active {
 	transform: translate(0px, 0px);
@@ -487,6 +525,14 @@ footer{
 	background: url(../images/sidenav11.png) no-repeat;
 	background-size: contain;
 }
+.sidenav-a div p.p12 {
+	background: url(../images/sidenav12.png) no-repeat;
+	background-size: contain;
+}
+.sidenav-a div p.p13 {
+	background: url(../images/sidenav13.png) no-repeat;
+	background-size: contain;
+}
 .sidenav-a div i {
 	font-style: normal;
 	float: right;
@@ -514,7 +560,6 @@ footer{
 	color: #2A2A2F;
 	padding: 0.08rem 0 0.08rem 0.693333rem;
 	line-height: 1;
-	vertical-align: top;
 }
 .sidenav ul li.borNo {
 	border-bottom: none;
@@ -523,7 +568,7 @@ footer{
 /*侧边导航栏*/
 
 /*单页删选*/
-.S_PageSelection {
+.M_PageSelection {
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -539,29 +584,48 @@ footer{
     color: #000;
     letter-spacing: 0.8px;
 }
-.S_PageSelection_content {
+.M_PageSelection-title {
+	position: relative;
+	z-index: 50;
+	background-color: #fff;
+}
+.M_PageSelection-title .title_line {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom:0;
+}
+.M_PageSelection-title .title_line .line {
+	width: 100%;
+	height: 1px;
+	background-color:#7E808A;
+}
+
+
+
+
+.M_PageSelection_content {
 	width: 100%;
 }
-.S_PageSelection_content ul{
+.M_PageSelection_content ul{
 	width: 100%;
-	border-top:1px solid #7E808A;
 }
-.S_PageSelection_content ul li{
+.M_PageSelection_content ul li{
 	width: 100%;
 	border-bottom:1px solid #EAEBF0;
 	position: relative;
 }
-.S_PageSelection_content ul li.active i{
+.M_PageSelection_content ul li.active i{
 	border: 2px solid #2A2A2F;
 	border-radius: 50%;
 	background: #2A2A2F;
 }
-.S_PageSelection_content ul li p{
+.M_PageSelection_content ul li p{
 	font-size: 0.373333rem;
 	color: #2A2A2F;
 	padding: 0.426667rem 0;
 }
-.S_PageSelection_content ul li i{
+.M_PageSelection_content ul li i{
 	position: absolute;
 	right:0;
 	top:0.426667rem;
@@ -571,25 +635,19 @@ footer{
 	border-radius: 50%;
 	background: #fff;
 }
-.S_PageSelection .S_btn {
-	position: absolute;
-	bottom:0.64rem;
-	left:50%;
-	margin-left: -2.173333rem;
-	width: 4.346667rem;
-	height: 1.066667rem;
-	background: #2A2A2F;
-	text-decoration: none;
-	text-align: center;
-	line-height:  1.066667rem;
-	font-size: 0.373333rem;
-	color: #FFFFFF;
-}
-
 
 .M_PageSelection_content {
-	border-top: 1px solid #7E808A;
-	padding-top: 0.533333rem;
+	/*border-top: 1px solid #7E808A;*/
+	padding-top:2.453333rem;
+	position: absolute;
+	top:0;
+	height: 100%;
+	overflow-y: auto;
+	padding-bottom: 1.653333rem;
+	-webkit-overflow-scrolling : touch;
+}
+.M_PageSelection_content.padding-s {
+	padding-top: 1.92rem;
 }
 .M_select {
 	padding-bottom: 0.533333rem;
@@ -611,14 +669,18 @@ footer{
 	color: #fff;
 }
 
-.M_btn {
-	position: absolute;
-	bottom:0.56rem;
+.M_btn,.S_btn {
 	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom:0;
+	padding: 0.28rem 0;
+	background-color: #fff;
+	z-index: 50;
 }
 .M_btn a {
 	display: inline-block;
-	width: 43%;
+	width: 48%;
 	height: 1.066667rem;
 	text-align: center;
 	line-height:1.066667rem;
@@ -636,15 +698,71 @@ footer{
 	background: #2A2A2F;
 	float: right;
 }
-
-
-
-
-
+.S_btn a {
+	display: inline-block;
+	width: 100%;
+	height: 1.066667rem;
+	text-align: center;
+	line-height:1.066667rem;
+	font-size: 0.373333rem;
+}
+.S_btn a.determine {
+	border: 1px solid #2A2A2F;
+	color: #fff; 
+	background: #2A2A2F;
+}
 
 
 /*单页删选*/
 
+/*弹窗提示*/
+.submit-prompt {
+	position: fixed;
+	top: 0;
+	left:0;
+	width: 100%;
+	height:100%;
+	background-color: rgba(0,0,0,.4);
+	display: none;
+}
+.submit-prompt .sp-content {
+	width: 70%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -35%;
+	margin-top: -1.906667rem;
+	background-color: #fff;
+	border-radius: 24px;
+}
+.submit-prompt .sp-content p{
+	padding: 0.64rem 0.586667rem;
+	font-size: 0.426667rem;
+	color: #030303;
+	line-height: 1.6;
+}
+.submit-prompt .sp-content div {
+	display: flex;
+	border-top: 1px solid #4D4D4D;
+}
+.submit-prompt .sp-content div a{
+	display: block;
+	width: 50%;
+	text-align: center;
+	height: 1.173333rem;
+	line-height: 1.173333rem;
+	-webkit-box-flex: 1;
+	font-size: 0.426667rem;
+	color: #0076FF;
+}
+.submit-prompt .sp-content div a.bor{
+	border-right: 1px solid #4D4D4D;
+}
 
 
 
+
+
+
+
+/*弹窗提示*/

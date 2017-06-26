@@ -2,14 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>会议提交活动信息</title>
+        <title>活动信息详情</title>
         <meta content="yes" name="apple-mobile-web-app-capable">
         <meta content="yes" name="apple-touch-fullscreen">
         <meta content="telephone=no,email=no" name="format-detection">
         <link rel="stylesheet" href="css/swiper.css">
         <link rel="stylesheet" href="css/public.css">
         <link rel="stylesheet" href="css/module.css">
-        <link rel="stylesheet" href="css/calendar.css">
 
         <script src="build/flexible_css.debug.js"></script>
         <script src="build/flexible.debug.js"></script>
@@ -130,56 +129,60 @@
             <div class="newList">
                 <div class="newList-content">
                     <div class="newList-title">
-                        <h4 class="conference-form">提交活动信息</h4><br>
+                        <h4 class="conference-form">活动信息详情</h4><br>
                         <p>管理你的乌镇之旅</p>
                     </div>
                 </div>
                 <div class="form-list">
-                    <div class="container">
-                        <div class="line"></div>
-                        <h4>枕水度假酒店-华美宫</h4>
-                        <div class="form-list-modular">
-                            <div class="small">
-                                <p>联系人姓名</p>
-                                <input type="" name="" placeholder="请填写姓名便于联系">
-                                <em class="form-title">用户名填写有误。</em>
+                    <div class="container" style="min-height: 11.78rem;">
+                        <div class="line" style="margin-bottom:0.64rem;"></div>
+                        <div class="activity-details">
+                            <div class="ad-title">
+                                <h6>望津里精品酒店会议厅</h6>
+                                <span>审核中</span>
                             </div>
-                            <div class="small">
-                                <p>电话</p>
-                                <input type="" name="" placeholder="联系人电话号码">
+                            <div class="ad-info">
+                                <ul>
+                                    <li class="clearfix">
+                                        <b>联系人姓名：</b><span>陈某</span>
+                                    </li>
+                                    <li class="clearfix">
+                                        <b>电话：</b><span>18676543214</span>
+                                    </li>
+                                    <li class="clearfix">
+                                        <b>E-mail：</b><span>shengdugoutong@deeping.cn</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="small">
-                                <p>E-mail</p>
-                                <input type="" name="" placeholder="邮箱地址">
+                            <div class="ad-info">
+                                <ul>
+                                    <li class="clearfix">
+                                        <b>活动人数：</b><span>50人</span>
+                                    </li>
+                                    <li class="clearfix">
+                                        <b>活动日期：</b><span>2017-02-24 </span>
+                                    </li>
+                                    <li class="clearfix">
+                                        <b>活动预算：</b><span>20000</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="small">
-                                <p>活动人数</p>
-                                <input type="" name="" placeholder="使用人数">
-                            </div>
-                            <div class="small" id="choice_date">
-                                <p>活动日期</p>
-                                <span data-reset="5" data-whether-end="false">2016-12-28</span>
-                            </div>
-                            <div class="small">
-                                <p>活动预算</p>
-                                <input type="" name="" placeholder="填写您的预算金额">
-                            </div>
-                            <div class="small">
-                                <p>行程计划</p>
-                                <input type="" name="" placeholder="">
-                            </div>
-                            <div class="small">
-                                <p>详细要求</p>
-                                <input type="" name="" placeholder="">
+                            <div class="ad-info">
+                                <ul>
+                                    <li class="clearfix">
+                                        <b>计划行程：</b><span>当天早上8点到达乌镇，九点到达酒店办理登记手续，开会持续到下午2点。当天早上8点到达乌镇，九点到达酒店办理登记手续，开会持续到下午2点。当天早上8点到达乌镇，九点到达酒店办理登记手续，开会持续到下午2点。当天早上8点到达乌镇，九点到达酒店办理登记手续，开会持续到下午2点。当天早上8点到达乌镇，九点到达酒店办理登记手续，开会持续到下午2点。</span>
+                                    </li>
+                                    <li class="clearfix">
+                                        <b>详细要求：</b><span>九点到达酒店办理登记手续，开会持续到下午2点九点到达酒店办理登记手续，开会持续到下午2点九点到达酒店办理登记手续，开会持续到下午2点</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-      
-
             <!-- 页脚 -->
-            <footer class="footer2 footer2-pb">
+            <footer class="footer2">
                 <div class="footer2-content">
                     <div class="footer2-contact clearfix">
                         <h5 class="left">联系我们</h5>
@@ -196,67 +199,5 @@
             <a class="help" href="javascript:;"></a>
             <div class="gotop" id="gotop"></div>
         </div> 
-        <!-- 马上预约 -->
-        <div class="appointed clearfix">
-            <div class="container">
-                <div class="appointed-text left">
-                    <p class="tel">预约成功后我们会在24小时内联系您核实预约信息</p>
-                </div>
-                <div class="appointed-link right">
-                    <a href="javascript:;">提交信息</a>
-                </div>
-            </div>
-        </div>
-        <!-- 日期选择部分 -->
-        <div class="calendar" style="">
-            <div class="calendar-content">
-                <div class="newList-co-option calendar-top">
-                    <div class="date clearfix" id="show_choice_date">
-                        <div class="date-arrive borderR">
-                            <p>活动日期</p>
-                            <span>2016-12-28</span>
-                        </div>
-                        <div class="date-leave">
-                            <p></p>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="week-bar"> 
-                        <div class="container">
-                            <ul> 
-                                <li class="weekend">日</li> 
-                                <li>一</li> 
-                                <li>二</li> 
-                                <li>三</li> 
-                                <li>四</li> 
-                                <li>五</li> 
-                                <li class="weekend">六</li> 
-                            </ul> 
-                        </div>
-                    </div>
-                </div>
-                <div class="calendar-scroll">
-                    <div class="container">
-                        <div class="calendar-day" id="calendar-day">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="calendar-btn">
-                    <a class="cancel" href="javascript:;">取消</a>
-                    <a class="determine" href="javascript:;">确定</a>
-                </div>
-            </div>
-        </div>
-        <div class="submit-prompt">
-            <div class="sp-content">
-                <p>活动信息提交成功，我们会在24小时内联系您核实预约信息</p>
-                <div>
-                    <a class="bor" href="">返回</a>
-                    <a href="conference-from-activity.html">查看进度</a>
-                </div>
-            </div>
-        </div>
-    <script src="js/calendar.js"></script>
     </body>
 </html>

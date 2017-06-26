@@ -261,6 +261,11 @@
         });
 
         $('#choice_date').click(function(event) {
+            //判断需不需要结束日期
+            var dataWhetherEnd = $('#choice_date').find('span').eq(0).attr('data-whether-end');
+            if(dataWhetherEnd!='true'){
+                $('#show_choice_date').find('.date-leave').hide();
+            }
             $('.calendar').show();
             $('html').addClass('popup_prohibit_html');
         });
@@ -269,8 +274,6 @@
             $('html').removeClass('popup_prohibit_html');
         });
         $('.calendar').find('.calendar-btn').find('.determine').click(function(event) {
-            
-
             //判断需不需要结束日期
             var dataWhetherEnd = $('#choice_date').find('span').eq(0).attr('data-whether-end');
             if(dataWhetherEnd=='true'){

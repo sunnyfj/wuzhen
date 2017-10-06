@@ -43,9 +43,10 @@
 	padding-bottom: 1.333333rem;
 	overflow-y:auto;
 	height: 100%; 
+	-webkit-overflow-scrolling : touch;
 }
 .calendar-day {
-	
+	height: 100%;
 }
 .calendar-day table {
 	width: 100%;
@@ -92,15 +93,15 @@
     color: #2A2A2F;
 }
 .calendar-day table tbody tr td.selected-start span{
-	background-color: #F3F4F8;
-	 border-radius: 50% 0 0 50%;
+	/*background-color: #F3F4F8;*/
+	border-radius: 50% 0 0 50%;
 }
 .calendar-day table tbody tr td.selected-start span i{
 	background-color: #2A2A2F;
 	color:#fff;
 }
 .calendar-day table tbody tr td.selected-end span {
-	background-color: #F3F4F8;
+	/*background-color: #F3F4F8;*/
 	border-radius: 0 50% 50% 0;
 }
 .calendar-day table tbody tr td.selected-end span i{

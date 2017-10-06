@@ -46,7 +46,6 @@
 	-webkit-overflow-scrolling : touch;
 }
 .calendar-day {
-	height: 100%;
 }
 .calendar-day table {
 	width: 100%;

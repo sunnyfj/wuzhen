@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/swiper.css">
         <link rel="stylesheet" href="css/public.css">
         <link rel="stylesheet" href="css/module.css">
+        <link rel="stylesheet" href="css/calendar.css">
 
         <script src="build/flexible_css.debug.js"></script>
         <script src="build/flexible.debug.js"></script>
@@ -147,9 +148,9 @@
                                 <p>活动人数</p>
                                 <input type="" name="" placeholder="使用人数">
                             </div>
-                            <div class="small">
+                            <div class="small" id="choice_date">
                                 <p>活动日期</p>
-                                <input type="" name="" value="2017-03-30">
+                                <span data-reset="5" data-whether-end="false">2016-12-28</span>
                             </div>
                             <div class="small">
                                 <p>活动预算</p>
@@ -198,5 +199,47 @@
                 </div>
             </div>
         </div>
+        <!-- 日期选择部分 -->
+        <div class="calendar" style="">
+            <div class="calendar-content">
+                <div class="newList-co-option calendar-top">
+                    <div class="date clearfix" id="show_choice_date">
+                        <div class="date-arrive left borderR">
+                            <p>活动日期</p>
+                            <span>2016-12-28</span>
+                        </div>
+                        <div class="date-leave left">
+                            <p></p>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="week-bar"> 
+                        <div class="container">
+                            <ul> 
+                                <li class="weekend">日</li> 
+                                <li>一</li> 
+                                <li>二</li> 
+                                <li>三</li> 
+                                <li>四</li> 
+                                <li>五</li> 
+                                <li class="weekend">六</li> 
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-scroll">
+                    <div class="container">
+                        <div class="calendar-day" id="calendar-day">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-btn">
+                    <a class="cancel" href="javascript:;">取消</a>
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+    <script src="js/calendar.js"></script>
     </body>
 </html>

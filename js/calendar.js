@@ -170,53 +170,92 @@
             }
 
             //页面和 日期部分的展示日期设置为当前的
-            var td0_data_format_start = $('#calendar-day').find('.optional').eq(0).attr('data-date-format');
-            var td0_data_format_end = $('#calendar-day').find('.optional').eq(1).attr('data-date-format');
-            $('#choice_date').find('span').eq(0).text(td0_data_format_start);
-            $('#choice_date').find('span').eq(1).text(td0_data_format_end);   
-            $('#show_choice_date').find('span').eq(0).text(td0_data_format_start);
-            $('#show_choice_date').find('span').eq(1).text(td0_data_format_end);
+            var dataWhetherEnd = $('#choice_date').find('span').eq(0).attr('data-whether-end');
+            //判断需不需要结束日期
+            if(dataWhetherEnd=='true'){
+                var td0_data_format_start = $('#calendar-day').find('.optional').eq(0).attr('data-date-format');
+                var td0_data_format_end = $('#calendar-day').find('.optional').eq(1).attr('data-date-format');
+                $('#choice_date').find('span').eq(0).text(td0_data_format_start);
+                $('#choice_date').find('span').eq(1).text(td0_data_format_end);   
+                $('#show_choice_date').find('span').eq(0).text(td0_data_format_start);
+                $('#show_choice_date').find('span').eq(1).text(td0_data_format_end);
+            }else{
+                var td0_data_format_start = $('#calendar-day').find('.optional').eq(0).attr('data-date-format');
+                $('#choice_date').find('span').eq(0).text(td0_data_format_start);
+                $('#choice_date').find('span').eq(1).text('');   
+                $('#show_choice_date').find('span').eq(0).text(td0_data_format_start);
+                $('#show_choice_date').find('span').eq(1).text('');
+            }
+            
         }
         
         var myDate = new Date();
         showDate($('.calendar-day'),myDate.getFullYear(),myDate.getMonth());
         showColor($('.calendar table').eq(0).find('td.optional'),myDate.getFullYear(),myDate.getMonth()+1,Date());
         
+        //判断table多出的空行
+        var allTbody = $('.calendar').find('tbody');
+        var arr = [];
+        for(var j=0;j<allTbody.length;j++){
+            arr.push(allTbody.eq(j).find('tr:last'));
+            arr.push(allTbody.eq(j).find('tr:last').prev());
+        }
+        for(var i=0;i<arr.length;i++){            
+            for(var t=0;t<arr[i].find('td').length;t++){
+                if(!arr[i].find('td').eq(t).hasClass('optional') && !arr[i].find('td').eq(t).hasClass('gray')){
+                arr[i].find('td').eq(t).hide();
+                }
+            }
+        }
+        
+
+
+
+
         var bFlag = true;
         $('.calendar').find('td.optional').click(function(event){
             var $atd = $('.calendar').find('td.optional');
-            
-            if(bFlag){
-                $atd.removeClass('selected-start');
-                $atd.removeClass('selected-end');
-                $atd.removeClass('selected-line');
-                $(this).addClass('selected-start');
-                $('#show_choice_date').find('span').eq(0).text($(this).attr('data-date-format'));
-                $('#show_choice_date').find('span').eq(1).text($(this).next().attr('data-date-format'));
-                bFlag = false;
-            }else{
-                if($(this).attr('date-sec') <= $(this).parents('.calendar').find('.selected-start').attr('date-sec')){
+            var dataWhetherEnd = $('#choice_date').find('span').eq(0).attr('data-whether-end');
+            //判断需不需要结束日期
+            if(dataWhetherEnd =='true'){
+                if(bFlag){
                     $atd.removeClass('selected-start');
                     $atd.removeClass('selected-end');
                     $atd.removeClass('selected-line');
                     $(this).addClass('selected-start');
                     $('#show_choice_date').find('span').eq(0).text($(this).attr('data-date-format'));
-                    $('#show_choice_date').find('span').eq(1).text($(this).next().attr('data-date-format'));
+                    //$('#show_choice_date').find('span').eq(1).text($(this).next().attr('data-date-format'));
                     bFlag = false;
                 }else{
-                    $(this).addClass('selected-end');
-                    $('#show_choice_date').find('span').eq(1).text($(this).attr('data-date-format'));
-                    var startTime = $(this).parents('.calendar').find('.selected-start').attr('date-sec');
-                    var endTime = $(this).attr('date-sec');
+                    if($(this).attr('date-sec') <= $(this).parents('.calendar').find('.selected-start').attr('date-sec')){
+                        $atd.removeClass('selected-start');
+                        $atd.removeClass('selected-end');
+                        $atd.removeClass('selected-line');
+                        $(this).addClass('selected-start');
+                        $('#show_choice_date').find('span').eq(0).text($(this).attr('data-date-format'));
+                        //$('#show_choice_date').find('span').eq(1).text($(this).next().attr('data-date-format'));
+                        bFlag = false;
+                    }else{
+                        $(this).addClass('selected-end');
+                        $('#show_choice_date').find('span').eq(1).text($(this).attr('data-date-format'));
+                        var startTime = $(this).parents('.calendar').find('.selected-start').attr('date-sec');
+                        var endTime = $(this).attr('date-sec');
 
-                    for(var i=0;i<$atd.length;i++){
-                        if($atd.eq(i).attr('date-sec') >= startTime && $atd.eq(i).attr('date-sec') <= endTime){
-                            $atd.eq(i).addClass('selected-line');
+                        for(var i=0;i<$atd.length;i++){
+                            if($atd.eq(i).attr('date-sec') >= startTime && $atd.eq(i).attr('date-sec') <= endTime){
+                                $atd.eq(i).addClass('selected-line');
+                            }
                         }
+                        bFlag = true;
                     }
-                    bFlag = true;
                 }
-                
+            }else{
+                $atd.removeClass('selected-start');
+                $atd.removeClass('selected-end');
+                $atd.removeClass('selected-line');
+                $(this).addClass('selected-start');
+                $('#show_choice_date').find('span').eq(0).text($(this).attr('data-date-format'));
+                $('#show_choice_date').find('span').eq(1).text('');
             }
 
         });
@@ -230,9 +269,22 @@
             $('html').removeClass('popup_prohibit_html');
         });
         $('.calendar').find('.calendar-btn').find('.determine').click(function(event) {
-            $('.calendar').hide();
-            $('html').removeClass('popup_prohibit_html');
+            
 
+            //判断需不需要结束日期
+            var dataWhetherEnd = $('#choice_date').find('span').eq(0).attr('data-whether-end');
+            if(dataWhetherEnd=='true'){
+                if($('.calendar').find('td').hasClass('selected-start') && $('.calendar').find('td').hasClass('selected-end')){
+                    $('.calendar').hide();
+                    $('html').removeClass('popup_prohibit_html');
+                }else{
+                    alert('请选择离店时间');
+                    return;
+                }
+            }else{
+                $('.calendar').hide();
+                $('html').removeClass('popup_prohibit_html');
+            }
             var show_choice_date_start =$('#show_choice_date').find('span').eq(0).text();
             var show_choice_date_end =$('#show_choice_date').find('span').eq(1).text();
             $('#choice_date').find('span').eq(0).text(show_choice_date_start);

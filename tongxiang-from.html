@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/swiper.css">
         <link rel="stylesheet" href="css/public.css">
         <link rel="stylesheet" href="css/module.css">
+        <link rel="stylesheet" href="css/calendar.css">
 
         <script src="build/flexible_css.debug.js"></script>
         <script src="build/flexible.debug.js"></script>
@@ -132,8 +133,8 @@
                         <div class="form-list-modular">
                             <div class="small t-date">
                                 <p>预约日期</p>
-                                <div class="date clearfix">
-                                    <input class="time" type="text" readonly="readonly" value="2017-03-30">
+                                <div class="date clearfix" id="choice_date">
+                                    <span class="time" data-reset="5" data-whether-end="false">2016-12-28</span>
                                     <a class="btn" href="javascript:;">∨</a>
                                 </div>
                             </div>
@@ -142,7 +143,7 @@
                                 <div class="options">
                                     <a class="active" href="javascript:;">成人票</a>
                                     <a href="javascript:;">儿童票</a>
-                                    <span>剩余票数：1597</span>
+                                    <b>剩余票数：1597</b>
                                 </div>
                             </div>
                             <div class="small">
@@ -194,5 +195,47 @@
             <a class="help" href="javascript:;"></a>
             <div class="gotop" id="gotop"></div>
         </div> 
+        <!-- 日期选择部分 -->
+        <div class="calendar" style="">
+            <div class="calendar-content">
+                <div class="newList-co-option calendar-top">
+                    <div class="date clearfix" id="show_choice_date">
+                        <div class="date-arrive left borderR">
+                            <p>预约日期</p>
+                            <span>2016-12-28</span>
+                        </div>
+                        <div class="date-leave left">
+                            <p></p>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="week-bar"> 
+                        <div class="container">
+                            <ul> 
+                                <li class="weekend">日</li> 
+                                <li>一</li> 
+                                <li>二</li> 
+                                <li>三</li> 
+                                <li>四</li> 
+                                <li>五</li> 
+                                <li class="weekend">六</li> 
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-scroll">
+                    <div class="container">
+                        <div class="calendar-day" id="calendar-day">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-btn">
+                    <a class="cancel" href="javascript:;">取消</a>
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+        <script src="js/calendar.js"></script>
     </body>
 </html>

@@ -60,9 +60,10 @@
 	padding: 0.64rem 0 0.213333rem 0;
 }
 .calendar-day table tbody tr {
-	height: 1.626667rem;
+	
 }
 .calendar-day table tbody tr td{
+	padding-bottom: 0.266667rem;
 	text-align: center;
 	color: #2A2A2F;
 	height: 0.986667rem;

@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/swiper.css">
         <link rel="stylesheet" href="css/public.css">
         <link rel="stylesheet" href="css/module.css">
+        <link rel="stylesheet" href="css/calendar.css">
 
         <script src="build/flexible_css.debug.js"></script>
         <script src="build/flexible.debug.js"></script>
@@ -125,10 +126,10 @@
                         <p>51件产品</p>
                     </div>
                     <div class="newList-co-option">
-                        <div class="date clearfix">
+                        <div class="date clearfix" id="choice_date">
                             <div class="date-arrive left borderR">
                                 <p>到达</p>
-                                <span>2016-12-26</span>
+                                <span data-reset="5" data-whether-end="false">2016-12-28</span>
                             </div>
                             <div class="date-leave left">
                                 <p></p>
@@ -157,11 +158,11 @@
                             <div class="newList-info-oneof">
                                 <div class="nio-top clearfix">
                                     <div class="nio-top-l left">
-                                        <img src="images/nio-top1.png">
+                                        <a href="package-details.html"><img src="images/nio-top1.png"></a>
                                         <span>4.5</span>
                                     </div>
                                     <div class="nio-top-r left">
-                                        <h4>乐享美食</h4>
+                                        <h4><a href="package-details.html">乐享美食</a></h4>
                                         <h5><span>687</span>元<i>起</i></h5>
                                         <p>115条评价</p>
                                         <p>已售<span>1340</span></p>
@@ -414,5 +415,47 @@
                 </div>
             </div>
         </div>
+        <!-- 日期选择部分 -->
+        <div class="calendar" style="">
+            <div class="calendar-content">
+                <div class="newList-co-option calendar-top">
+                    <div class="date clearfix" id="show_choice_date">
+                        <div class="date-arrive left borderR">
+                            <p>到达</p>
+                            <span>2016-12-28</span>
+                        </div>
+                        <div class="date-leave left">
+                            <p></p>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="week-bar"> 
+                        <div class="container">
+                            <ul> 
+                                <li class="weekend">日</li> 
+                                <li>一</li> 
+                                <li>二</li> 
+                                <li>三</li> 
+                                <li>四</li> 
+                                <li>五</li> 
+                                <li class="weekend">六</li> 
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-scroll">
+                    <div class="container">
+                        <div class="calendar-day" id="calendar-day">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-btn">
+                    <a class="cancel" href="javascript:;">取消</a>
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+    <script src="js/calendar.js"></script>
     </body>
 </html>

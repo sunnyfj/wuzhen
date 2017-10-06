@@ -17,11 +17,6 @@
         <script src="js/zepto.js"></script>
         <script src="js/public.js"></script>
         <script src="js/module.js"></script>
-        <style type="text/css">
-            a:hover{
-                text-decoration: none;
-            }
-        </style>
     </head>
     <body>
         <!-- 侧边导航栏 -->
@@ -118,7 +113,7 @@
                     <a class="logo" href="index.html"><img src="images/logo.png"></a>
                 </div>
                 <div class="header-r">
-                    <a href="javascript:;"><img src="images/tel.png"></a>
+                    <a href="tel:13855555555"><img src="images/tel.png"></a>
                     <a class="personal" href="javascript:;"><img src="images/geren.png"></a>
                     <a href="javascript:;"><img src="images/shopping-cart.png"></a>
                 </div>      
@@ -134,7 +129,7 @@
                         <div class="date clearfix" id="choice_date">
                             <div class="date-arrive left borderR">
                                 <p>入住</p>
-                                <span>2016-12-28</span>
+                                <span data-reset="5">2016-12-28</span>
                             </div>
                             <div class="date-leave left">
                                 <p>离店</p>
@@ -423,13 +418,13 @@
 
 
 
-        <div class="calendar">
+        <div class="calendar" style="">
             <div class="calendar-content">
                 <div class="newList-co-option calendar-top">
-                    <div class="date clearfix">
-                        <div class="date-arrive left borderR" id="date-arrive">
+                    <div class="date clearfix" id="show_choice_date">
+                        <div class="date-arrive left borderR">
                             <p>入住</p>
-                            <span data-reset="5">2016-12-28</span>
+                            <span>2016-12-28</span>
                         </div>
                         <div class="date-leave left">
                             <p>离店</p>

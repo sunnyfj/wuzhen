@@ -1,19 +1,9 @@
  (
  	function() {
-
-        var boundStarDate = "";  //限定开始日期
-        var boundEndDate = "";  //限定结束日期
-        var disabledDate = [];//指定日期不可选
-        var boundStarDate_arr = [];
-        var boundEndDate_arr = [];
- 		var nowStart = "in";
-
-
-
  		function showDate(obj,year,month){
  			var oDate = new Date();
  			var dayNum = 0;
-            var resetDate = $('#date-arrive').find('span').attr('data-reset');
+            var resetDate = $('#choice_date').find('span').eq(0).attr('data-reset');
 
 			for(var t=0;t<resetDate;t++){
                 var oTable = $("<table></table>");
@@ -64,41 +54,83 @@
                 oDate.setDate(1);
                 oDate.setMonth(month-1);                
                 oDate.setFullYear(year);
-
+                var timeDate = new Date();
                 switch(oDate.getDay()){
                     case 0:
                         for(var i = 0;i<dayNum;i++){
                             aTd.eq(i).find('i').html(i+1);
+                            aTd.eq(i).addClass('optional');
+                            timeDate.setFullYear(year,month,(i+1),0,0,0);
+                            aTd.eq(i).attr({
+                                'date-sec': timeDate.getTime(),
+                                'data-date-format': year+'-'+tuDou(month)+'-'+tuDou((i+1))
+                            });
                         }
                     break;
                     case 1:
                         for(var i = 0;i<dayNum;i++){
                             aTd.eq(i+1).find('i').html(i+1);
+                            aTd.eq(i+1).addClass('optional');
+                            timeDate.setFullYear(year,month,(i+1),0,0,0);
+                            aTd.eq(i+1).attr({
+                                'date-sec': timeDate.getTime(),
+                                'data-date-format': year+'-'+tuDou(month)+'-'+tuDou((i+1))
+                            });
                         }
                     break;
                     case 2:
                         for(var i = 0;i<dayNum;i++){
                             aTd.eq(i+2).find('i').html(i+1);
+                            aTd.eq(i+2).addClass('optional');
+                            timeDate.setFullYear(year,month,(i+1),0,0,0);
+                            aTd.eq(i+2).attr({
+                                'date-sec': timeDate.getTime(),
+                                'data-date-format': year+'-'+tuDou(month)+'-'+tuDou((i+1))
+                            });
                         }
                     break;
                     case 3:
                         for(var i = 0;i<dayNum;i++){
                             aTd.eq(i+3).find('i').html(i+1);
+                            aTd.eq(i+3).addClass('optional');
+                            timeDate.setFullYear(year,month,(i+1),0,0,0);
+                            aTd.eq(i+3).attr({
+                                'date-sec': timeDate.getTime(),
+                                'data-date-format': year+'-'+tuDou(month)+'-'+tuDou((i+1))
+                            });
                         }
                     break;
                     case 4:
                         for(var i = 0;i<dayNum;i++){
                             aTd.eq(i+4).find('i').html(i+1);
+                            aTd.eq(i+4).addClass('optional');
+                            timeDate.setFullYear(year,month,(i+1),0,0,0);
+                            aTd.eq(i+4).attr({
+                                'date-sec': timeDate.getTime(),
+                                'data-date-format': year+'-'+tuDou(month)+'-'+tuDou((i+1))
+                            });
                         }
                     break;
                     case 5:
                         for(var i = 0;i<dayNum;i++){
                             aTd.eq(i+5).find('i').html(i+1);
+                            aTd.eq(i+5).addClass('optional');
+                            timeDate.setFullYear(year,month,(i+1),0,0,0);
+                            aTd.eq(i+5).attr({
+                                'date-sec': timeDate.getTime(),
+                                'data-date-format': year+'-'+tuDou(month)+'-'+tuDou((i+1))
+                            });
                         }
                     break;
                     case 6:
                         for(var i = 0;i<dayNum;i++){
                             aTd.eq(i+6).find('i').html(i+1);
+                            aTd.eq(i+6).addClass('optional');
+                            timeDate.setFullYear(year,month,(i+1),0,0,0);
+                            aTd.eq(i+6).attr({
+                                'date-sec': timeDate.getTime(),
+                                'data-date-format': year+'-'+tuDou(month)+'-'+tuDou((i+1))
+                            });
                         }
                     break;
                 }
@@ -115,6 +147,79 @@
  				}
  			}
  		}
+        function tuDou(n){
+            if(n<10){
+                return '0'+n;
+            }
+            return n;
+        }
+        //过去日期调整
+        function showColor(table1Td,year,month,date){
+            var result = [];
+            var oDate = new Date();
+
+            for(var i=0;i<table1Td.length;i++){
+                result.push(table1Td.eq(i));
+            }
+            if(parseInt(year) == oDate.getFullYear() && parseInt(month) == (oDate.getMonth()+1)) {
+                var thisDate = oDate.getDate();
+                for(var i=0;i<thisDate-1;i++){
+                    table1Td.eq(i).removeClass();
+                    table1Td.eq(i).addClass('gray');
+                }
+            }
+
+            //页面和 日期部分的展示日期设置为当前的
+            var td0_data_format_start = $('#calendar-day').find('.optional').eq(0).attr('data-date-format');
+            var td0_data_format_end = $('#calendar-day').find('.optional').eq(1).attr('data-date-format');
+            $('#choice_date').find('span').eq(0).text(td0_data_format_start);
+            $('#choice_date').find('span').eq(1).text(td0_data_format_end);   
+            $('#show_choice_date').find('span').eq(0).text(td0_data_format_start);
+            $('#show_choice_date').find('span').eq(1).text(td0_data_format_end);
+        }
+        
+        var myDate = new Date();
+        showDate($('.calendar-day'),myDate.getFullYear(),myDate.getMonth());
+        showColor($('.calendar table').eq(0).find('td.optional'),myDate.getFullYear(),myDate.getMonth()+1,Date());
+        
+        var bFlag = true;
+        $('.calendar').find('td.optional').click(function(event){
+            var $atd = $('.calendar').find('td.optional');
+            
+            if(bFlag){
+                $atd.removeClass('selected-start');
+                $atd.removeClass('selected-end');
+                $atd.removeClass('selected-line');
+                $(this).addClass('selected-start');
+                $('#show_choice_date').find('span').eq(0).text($(this).attr('data-date-format'));
+                $('#show_choice_date').find('span').eq(1).text($(this).next().attr('data-date-format'));
+                bFlag = false;
+            }else{
+                if($(this).attr('date-sec') <= $(this).parents('.calendar').find('.selected-start').attr('date-sec')){
+                    $atd.removeClass('selected-start');
+                    $atd.removeClass('selected-end');
+                    $atd.removeClass('selected-line');
+                    $(this).addClass('selected-start');
+                    $('#show_choice_date').find('span').eq(0).text($(this).attr('data-date-format'));
+                    $('#show_choice_date').find('span').eq(1).text($(this).next().attr('data-date-format'));
+                    bFlag = false;
+                }else{
+                    $(this).addClass('selected-end');
+                    $('#show_choice_date').find('span').eq(1).text($(this).attr('data-date-format'));
+                    var startTime = $(this).parents('.calendar').find('.selected-start').attr('date-sec');
+                    var endTime = $(this).attr('date-sec');
+
+                    for(var i=0;i<$atd.length;i++){
+                        if($atd.eq(i).attr('date-sec') >= startTime && $atd.eq(i).attr('date-sec') <= endTime){
+                            $atd.eq(i).addClass('selected-line');
+                        }
+                    }
+                    bFlag = true;
+                }
+                
+            }
+
+        });
 
         $('#choice_date').click(function(event) {
             $('.calendar').show();
@@ -127,9 +232,11 @@
         $('.calendar').find('.calendar-btn').find('.determine').click(function(event) {
             $('.calendar').hide();
             $('html').removeClass('popup_prohibit_html');
-        });
-        var myDate = new Date();
-        showDate($('.calendar-day'),myDate.getFullYear(),myDate.getMonth());
 
+            var show_choice_date_start =$('#show_choice_date').find('span').eq(0).text();
+            var show_choice_date_end =$('#show_choice_date').find('span').eq(1).text();
+            $('#choice_date').find('span').eq(0).text(show_choice_date_start);
+            $('#choice_date').find('span').eq(1).text(show_choice_date_end);
+        });
  	}
  )()

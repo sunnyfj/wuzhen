@@ -1152,6 +1152,12 @@ body .package-btn a {
 	font-size: 0.373333rem;
 	color: #7E808A;
 }
+.form-list-modular .small .form-title {
+	display: block;
+	padding-top:0.213333rem;
+	color: #7E808A;
+	font-size: 0.373333rem;
+}
 /*会议提交活动信息*/
 
 /*桐乡市民游乌镇*/

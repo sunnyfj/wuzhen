@@ -111,4 +111,10 @@ $(function(){
 	$('.co-option .options a').click(function(){
 		$(this).addClass('active').siblings().removeClass('active');
 	})
+	//会议马上预约按钮
+	$('.appointed-link a').click(function(event) {
+        alert('预约成功')
+        window.location.href="https://www.baidu.com"; 
+         
+	});
 })

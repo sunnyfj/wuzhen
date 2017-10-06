@@ -21,6 +21,7 @@
 	left:0;
 	height:3.04rem;
 	padding-bottom: 0;
+	z-index: 99;
 }
 .week-bar ul{
 	border-top: 1px solid #D5DAE1;
@@ -46,6 +47,7 @@
 	-webkit-overflow-scrolling : touch;
 }
 .calendar-day {
+	
 }
 .calendar-day table {
 	width: 100%;
@@ -118,6 +120,7 @@
 	left: 0;
 	display: flex;
 	width: 100%;
+	z-index: 99;
 }
 .calendar-btn a{
 	display: inline-block;
